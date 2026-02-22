@@ -1,3 +1,112 @@
+/* ===== Preloader ===== */
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.preloader.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.preloader__paws {
+  position: relative;
+  width: 120px;
+  height: 200px;
+}
+
+.preloader__paw {
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  opacity: 0;
+  animation: pawStep 2s infinite;
+}
+
+/* Left paw — bottom */
+.preloader__paw:nth-child(1) {
+  bottom: 0;
+  left: 8px;
+  transform: rotate(-10deg);
+  animation-delay: 0s;
+}
+
+/* Right paw */
+.preloader__paw:nth-child(2) {
+  bottom: 40px;
+  right: 8px;
+  transform: rotate(10deg);
+  animation-delay: 0.4s;
+}
+
+/* Left paw */
+.preloader__paw:nth-child(3) {
+  bottom: 80px;
+  left: 8px;
+  transform: rotate(-10deg);
+  animation-delay: 0.8s;
+}
+
+/* Right paw */
+.preloader__paw:nth-child(4) {
+  bottom: 120px;
+  right: 8px;
+  transform: rotate(10deg);
+  animation-delay: 1.2s;
+}
+
+/* Left paw — top */
+.preloader__paw:nth-child(5) {
+  bottom: 160px;
+  left: 8px;
+  transform: rotate(-10deg);
+  animation-delay: 1.6s;
+}
+
+.preloader__paw svg {
+  width: 100%;
+  height: 100%;
+  fill: #1E8E7E;
+  filter: drop-shadow(0 0 6px rgba(30, 142, 126, 0.5));
+}
+
+@keyframes pawStep {
+  0%   { opacity: 0; transform: scale(0.5) translateY(10px); }
+  20%  { opacity: 1; transform: scale(1) translateY(0); }
+  50%  { opacity: 1; }
+  80%  { opacity: 0; }
+  100% { opacity: 0; }
+}
+
+.preloader__text {
+  margin-top: 32px;
+  color: #1E8E7E;
+  font-family: var(--font-heading);
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  animation: preloaderPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes preloaderPulse {
+  0%, 100% { opacity: 0.5; }
+  50%      { opacity: 1; }
+}
+
+/* ===== Design Tokens ===== */
+
 /* Design Tokens */
 :root {
   /* Brand Colors */

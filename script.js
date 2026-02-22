@@ -1,3 +1,17 @@
+// Hide preloader when page is fully loaded
+window.addEventListener('load', function() {
+  const preloader = document.getElementById('preloader');
+  if (preloader) {
+    setTimeout(function() {
+      preloader.classList.add('hidden');
+      // Remove from DOM after transition
+      setTimeout(function() {
+        preloader.remove();
+      }, 500);
+    }, 800); // Minimum display time for animation
+  }
+});
+
 // Initialize on DOM load
 document.addEventListener('DOMContentLoaded', function() {
   initYear();
