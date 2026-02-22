@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Блог та новини — Порятунок тварин Львівщини</title>
+  <meta name="description" content="Останні новини, історії порятунку та корисні статті про догляд за тваринами від нашої спільноти." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a class="brand" href="index.html" aria-label="На головну">
+        <span class="brand__logo" aria-hidden="true">
+          <img src="images/logo.svg" alt="Логотип" />
+        </span>
+        <span class="brand__name">Порятунок Тварин</span>
+      </a>
+
+      <nav class="nav" aria-label="Навігація">
+        <a href="index.html">Головна</a>
+        <a href="about.html">Про нас</a>
+        <a href="gallery.html">Галерея</a>
+        <a href="blog.html" class="active">Блог</a>
+        <a href="contacts.html">Контакти</a>
+        <a href="index.html#help">Як допомогти</a>
+        <a href="index.html#urgent">Термінові збори</a>
+        <a href="index.html#partners">Партнери</a>
+      </nav>
+
+      <div class="header__right">
+        <button class="btn btn--primary" data-action="donate">Донат</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- BLOG HERO -->
+    <section class="gallery-hero section">
+      <div class="gallery-hero__image">
+        <img src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=1440&h=500&fit=crop" alt="Блог та новини" onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'1440\' height=\'500\'%3E%3Crect fill=\'%23E5E7EB\' width=\'1440\' height=\'500\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' text-anchor=\'middle\' dy=\'.3em\' fill=\'%236B7280\' font-family=\'sans-serif\' font-size=\'18\'%3EBlog Hero%3C/text%3E%3C/svg%3E';" />
+        <div class="gallery-hero__overlay"></div>
+      </div>
+      <div class="container">
+        <div class="gallery-hero__content">
+          <div class="post-breadcrumb">
+            <a href="index.html">Головна</a> / <span>Блог</span>
+          </div>
+          <h1>Блог та новини</h1>
+        </div>
+      </div>
+    </section>
+
+    <!-- BLOG POSTS -->
+    <section class="section">
+      <div class="container">
+        <div class="section__header">
+          <h2>Будьте в курсі подій</h2>
+          <p class="text">
+            Читайте останні новини про порятунок тварин, корисні поради з догляду, історії успішних врятувань та оновлення про нашу роботу.
+          </p>
+        </div>
+
+        <div class="blog-grid">
+          <article class="blog-card">
+            <div class="blog-card__image">
+              <img src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=400&h=300&fit=crop" alt="10 порад для здоров'я тварин" onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'300\'%3E%3Crect fill=\'%23E5E7EB\' width=\'400\' height=\'300\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' text-anchor=\'middle\' dy=\'.3em\' fill=\'%236B7280\' font-family=\'sans-serif\' font-size=\'14\'%3EBlog 1%3C/text%3E%3C/svg%3E';" />
+              <div class="blog-card__date">05 січ</div>
+            </div>
+            <div class="blog-card__body">
+              <span class="blog-card__category">Блог</span>
+              <h3 class="blog-card__title">10 важливих порад для здоров'я вашої тварини</h3>
+              <p class="blog-card__excerpt">
+                Регулярні ветеринарні огляди, правильне харчування, фізична активність та увага до поведінки — це основи здорового життя вашого улюбленця.
+              </p>
+              <a href="single-post.html" class="blog-card__link">Читати далі →</a>
+            </div>
+          </article>
+
+          <article class="blog-card">
+            <div class="blog-card__image">
+              <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=400&h=300&fit=crop" alt="Як обрати корм для тварини" onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'300\'%3E%3Crect fill=\'%23E5E7EB\' width=\'400\' height=\'300\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' text-anchor=\'middle\' dy=\'.3em\' fill=\'%236B7280\' font-family=\'sans-serif\' font-size=\'14\'%3EBlog 2%3C/text%3E%3C/svg%3E';" />
+              <div class="blog-card__date">03 січ</div>
+            </div>
+            <div class="blog-card__body">
+              <span class="blog-card__category">Догляд</span>
+              <h3 class="blog-card__title">Як обрати правильний корм для вашого улюбленця</h3>
+              <p class="blog-card__excerpt">
+                Вибір корму залежить від віку, розміру, активності та стану здоров'я тварини. Розповідаємо, на що звернути увагу при виборі.
+              </p>
+              <a href="single-post.html" class="blog-card__link">Читати далі →</a>
+            </div>
+          </article>
+
+          <article class="blog-card">
+            <div class="blog-card__image">
+              <img src="https://images.unsplash.com/photo-1551717743-49959800b1f6?w=400&h=300&fit=crop" alt="Ветеринарні огляди" onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'300\'%3E%3Crect fill=\'%23E5E7EB\' width=\'400\' height=\'300\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' text-anchor=\'middle\' dy=\'.3em\' fill=\'%236B7280\' font-family=\'sans-serif\' font-size=\'14\'%3EBlog 3%3C/text%3E%3C/svg%3E';" />
+              <div class="blog-card__date">28 груд</div>
+            </div>
+            <div class="blog-card__body">
+              <span class="blog-card__category">Блог</span>
+              <h3 class="blog-card__title">Важливість регулярних ветеринарних оглядів</h3>
+              <p class="blog-card__excerpt">
+                Профілактичні огляди допомагають виявити проблеми на ранніх стадіях та забезпечити довге та здорове життя вашій тварині.
+              </p>
+              <a href="single-post.html" class="blog-card__link">Читати далі →</a>
+            </div>
+          </article>
+
+          <article class="blog-card">
+            <div class="blog-card__image">
+              <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=400&h=300&fit=crop" alt="Притулки для тварин" onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'300\'%3E%3Crect fill=\'%23E5E7EB\' width=\'400\' height=\'300\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' text-anchor=\'middle\' dy=\'.3em\' fill=\'%236B7280\' font-family=\'sans-serif\' font-size=\'14\'%3EBlog 4%3C/text%3E%3C/svg%3E';" />
+              <div class="blog-card__date">25 груд</div>
+            </div>
+            <div class="blog-card__body">
+              <span class="blog-card__category">Новини</span>
+              <h3 class="blog-card__title">Як працюють притулки для тварин у Львівщині</h3>
+              <p class="blog-card__excerpt">
+                Дізнайтеся про роботу притулків, процес адаптації тварин та як ви можете допомогти тваринам знайти новий дім.
+              </p>
+              <a href="single-post.html" class="blog-card__link">Читати далі →</a>
+            </div>
+          </article>
+
+          <article class="blog-card">
+            <div class="blog-card__image">
+              <img src="https://images.unsplash.com/photo-1583336663277-620dc1996580?w=400&h=300&fit=crop" alt="Центри адаптації" onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'300\'%3E%3Crect fill=\'%23E5E7EB\' width=\'400\' height=\'300\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' text-anchor=\'middle\' dy=\'.3em\' fill=\'%236B7280\' font-family=\'sans-serif\' font-size=\'14\'%3EBlog 5%3C/text%3E%3C/svg%3E';" />
+              <div class="blog-card__date">20 груд</div>
+            </div>
+            <div class="blog-card__body">
+              <span class="blog-card__category">Новини</span>
+              <h3 class="blog-card__title">Огляд центрів адаптації тварин</h3>
+              <p class="blog-card__excerpt">
+                Як організована робота центрів адаптації, які послуги вони надають та як стати частиною цього процесу.
+              </p>
+              <a href="single-post.html" class="blog-card__link">Читати далі →</a>
+            </div>
+          </article>
+
+          <article class="blog-card">
+            <div class="blog-card__image">
+              <img src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=400&h=300&fit=crop" alt="Догляд за твариною" onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'300\'%3E%3Crect fill=\'%23E5E7EB\' width=\'400\' height=\'300\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' text-anchor=\'middle\' dy=\'.3em\' fill=\'%236B7280\' font-family=\'sans-serif\' font-size=\'14\'%3EBlog 6%3C/text%3E%3C/svg%3E';" />
+              <div class="blog-card__date">15 груд</div>
+            </div>
+            <div class="blog-card__body">
+              <span class="blog-card__category">Догляд</span>
+              <h3 class="blog-card__title">Секрети щасливого та здорового догляду за твариною</h3>
+              <p class="blog-card__excerpt">
+                Правильний догляд включає не лише фізичне здоров'я, але й емоційний комфорт та соціалізацію вашої тварини.
+              </p>
+              <a href="single-post.html" class="blog-card__link">Читати далі →</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="gallery-actions">
+          <button class="btn btn--primary">Показати ще</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section section--alt">
+      <div class="container">
+        <div class="cta-banner">
+          <div class="cta-banner__content">
+            <h2>Кожне життя варте <span class="cta-banner__accent">порятунку</span></h2>
+            <p class="text">Твій донат покриває ліки, операції та перетримку. Твій час — виїзди, доставку і турботу. Разом ми сильніші.</p>
+            <div class="cta-banner__actions">
+              <button class="btn btn--primary" data-action="donate">Підтримати донатом</button>
+              <button class="btn btn--white">Стати волонтером</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <div class="brand">
+          <span class="brand__logo" aria-hidden="true">
+            <img src="images/logo.svg" alt="Логотип" />
+          </span>
+          <span class="brand__name">Порятунок Тварин</span>
+        </div>
+        <p class="caption">Волонтерська спільнота Львівщини. Прозорість, відповідальність, любов до тварин.</p>
+        <div class="social">
+          <a href="#" aria-label="Facebook">FB</a>
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="Telegram">TG</a>
+        </div>
+      </div>
+
+      <div class="footer__links">
+        <p class="text-strong">Навігація</p>
+          <a href="index.html">Головна</a>
+          <a href="about.html">Про нас</a>
+          <a href="gallery.html">Галерея</a>
+          <a href="blog.html">Блог</a>
+          <a href="contacts.html">Контакти</a>
+          <a href="index.html#help">Як допомогти</a>
+          <a href="index.html#urgent">Термінові збори</a>
+          <a href="index.html#partners">Партнери</a>
+      </div>
+
+      <div class="footer__links">
+        <p class="text-strong">Документи</p>
+        <a href="#">Політика конфіденційності</a>
+        <a href="#">Умови використання</a>
+        <a href="index.html#reports">Звіти</a>
+        <a href="index.html#faq">FAQ</a>
+      </div>
+
+      <div class="footer__contact">
+        <p class="text-strong">Контакти</p>
+        <p class="caption">+380 XX XXX XX XX</p>
+        <p class="caption">hello@example.org</p>
+        <p class="caption">© <span id="year"></span> Порятунок Тварин</p>
+      </div>
+    </div>
+    
+    <div class="footer__notice">
+      <div class="container">
+        <p class="footer__notice-text">
+          Всі офіційні фінансові збори ми публікуємо на цьому сайті та на сторінках "Порятунок Тварин" у соцмережах. Ми не несемо відповідальності за збори інших людей чи організацій на нашу підтримку, опубліковані на сторонніх майданчиках.
+        </p>
+        <p class="footer__dev">Розробка та підтримка сайту — <a href="https://markupers.com" target="_blank" rel="noopener"><img src="images/markupers-logo.svg" alt="Markupers" /> Markupers</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top -->
+  <button class="scroll-top" aria-label="Прокрутити вгору">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Галерея — Порятунок тварин Львівщини</title>
+  <meta name="description" content="Галерея врятованих тварин та історій порятунку від нашої спільноти." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+</head>
+
+<body>
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a class="brand" href="index.html" aria-label="На головну">
+        <span class="brand__logo" aria-hidden="true">
+          <img src="images/logo.svg" alt="Логотип" />
+        </span>
+        <span class="brand__name">Порятунок Тварин</span>
+      </a>
+
+      <nav class="nav" aria-label="Навігація">
+        <a href="index.html">Головна</a>
+        <a href="about.html">Про нас</a>
+        <a href="gallery.html" class="active">Галерея</a>
+        <a href="blog.html">Блог</a>
+        <a href="contacts.html">Контакти</a>
+        <a href="index.html#help">Як допомогти</a>
+        <a href="index.html#urgent">Термінові збори</a>
+        <a href="index.html#partners">Партнери</a>
+      </nav>
+
+      <div class="header__right">
+        <button class="btn btn--primary" data-action="donate">Донат</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- GALLERY HERO -->
+    <section class="gallery-hero section">
+      <div class="gallery-hero__image">
+        <img src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=1440&h=500&fit=crop" alt="Галерея" onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'1440\' height=\'500\'%3E%3Crect fill=\'%23E5E7EB\' width=\'1440\' height=\'500\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' text-anchor=\'middle\' dy=\'.3em\' fill=\'%236B7280\' font-family=\'sans-serif\' font-size=\'18\'%3EGallery Hero%3C/text%3E%3C/svg%3E';" />
+        <div class="gallery-hero__overlay"></div>
+      </div>
+      <div class="container">
+        <div class="gallery-hero__content">
+          <div class="post-breadcrumb">
+            <a href="index.html">Головна</a> / <span>Галерея</span>
+          </div>
+          <h1>Наша галерея</h1>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY CONTENT -->
+    <section class="section">
+      <div class="container">
+        <div class="section__header">
+          <h2>Фотографії врятованих улюбленців</h2>
+          <p class="text">
+            Кожна фотографія розповідає історію порятунку, лікування та знайденого щастя. Це наші врятовані друзі, які знайшли люблячі домівки або очікують на своїх майбутніх господарів.
+          </p>
+        </div>
+
+        <div class="gallery-masonry">
+          <div class="gallery-item">
+            <a href="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=1200&h=900&fit=crop" data-fancybox="gallery" data-caption="Врятована тварина">
+              <img src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=400&h=600&fit=crop" alt="Врятована тварина" />
+            </a>
+          </div>
+          <div class="gallery-item">
+            <a href="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=1200&h=900&fit=crop" data-fancybox="gallery" data-caption="Врятована тварина">
+              <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=400&h=500&fit=crop" alt="Врятована тварина" />
+            </a>
+          </div>
+          <div class="gallery-item">
+            <a href="https://images.unsplash.com/photo-1551717743-49959800b1f6?w=1200&h=900&fit=crop" data-fancybox="gallery" data-caption="Врятована тварина">
+              <img src="https://images.unsplash.com/photo-1551717743-49959800b1f6?w=400&h=700&fit=crop" alt="Врятована тварина" />
+            </a>
+          </div>
+          <div class="gallery-item">
+            <a href="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=1200&h=900&fit=crop" data-fancybox="gallery" data-caption="Врятована тварина">
+              <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=400&h=400&fit=crop" alt="Врятована тварина" />
+            </a>
+          </div>
+          <div class="gallery-item">
+            <a href="https://images.unsplash.com/photo-1583336663277-620dc1996580?w=1200&h=900&fit=crop" data-fancybox="gallery" data-caption="Врятована тварина">
+              <img src="https://images.unsplash.com/photo-1583336663277-620dc1996580?w=400&h=550&fit=crop" alt="Врятована тварина" />
+            </a>
+          </div>
+          <div class="gallery-item">
+            <a href="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=1200&h=900&fit=crop" data-fancybox="gallery" data-caption="Врятована тварина">
+              <img src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=400&h=450&fit=crop" alt="Врятована тварина" />
+            </a>
+          </div>
+          <div class="gallery-item">
+            <a href="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=1200&h=900&fit=crop" data-fancybox="gallery" data-caption="Врятована тварина">
+              <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=400&h=600&fit=crop" alt="Врятована тварина" />
+            </a>
+          </div>
+          <div class="gallery-item">
+            <a href="https://images.unsplash.com/photo-1551717743-49959800b1f6?w=1200&h=900&fit=crop" data-fancybox="gallery" data-caption="Врятована тварина">
+              <img src="https://images.unsplash.com/photo-1551717743-49959800b1f6?w=400&h=380&fit=crop" alt="Врятована тварина" />
+            </a>
+          </div>
+          <div class="gallery-item">
+            <a href="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=1200&h=900&fit=crop" data-fancybox="gallery" data-caption="Врятована тварина">
+              <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=400&h=500&fit=crop" alt="Врятована тварина" />
+            </a>
+          </div>
+          <div class="gallery-item">
+            <a href="https://images.unsplash.com/photo-1583336663277-620dc1996580?w=1200&h=900&fit=crop" data-fancybox="gallery" data-caption="Врятована тварина">
+              <img src="https://images.unsplash.com/photo-1583336663277-620dc1996580?w=400&h=650&fit=crop" alt="Врятована тварина" />
+            </a>
+          </div>
+          <div class="gallery-item">
+            <a href="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=1200&h=900&fit=crop" data-fancybox="gallery" data-caption="Врятована тварина">
+              <img src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=400&h=420&fit=crop" alt="Врятована тварина" />
+            </a>
+          </div>
+        </div>
+
+        <div class="gallery-actions">
+          <button class="btn btn--primary">Показати ще</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA BANNER -->
+    <section class="section section--alt">
+      <div class="container">
+        <div class="cta-banner">
+          <div class="cta-banner__content">
+            <h2>Кожне життя варте <span class="cta-banner__accent">порятунку</span></h2>
+            <p class="text">Твій донат покриває ліки, операції та перетримку. Твій час — виїзди, доставку і турботу. Разом ми сильніші.</p>
+            <div class="cta-banner__actions">
+              <button class="btn btn--primary" data-action="donate">Підтримати донатом</button>
+              <button class="btn btn--white">Стати волонтером</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <div class="brand">
+          <span class="brand__logo" aria-hidden="true">
+            <img src="images/logo.svg" alt="Логотип" />
+          </span>
+          <span class="brand__name">Порятунок Тварин</span>
+        </div>
+        <p class="caption">Волонтерська спільнота Львівщини. Прозорість, відповідальність, любов до тварин.</p>
+        <div class="social">
+          <a href="#" aria-label="Facebook">FB</a>
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="Telegram">TG</a>
+        </div>
+      </div>
+
+      <div class="footer__links">
+        <p class="text-strong">Навігація</p>
+          <a href="index.html">Головна</a>
+          <a href="about.html">Про нас</a>
+          <a href="gallery.html">Галерея</a>
+          <a href="blog.html">Блог</a>
+          <a href="contacts.html">Контакти</a>
+          <a href="index.html#help">Як допомогти</a>
+          <a href="index.html#urgent">Термінові збори</a>
+          <a href="index.html#partners">Партнери</a>
+      </div>
+
+      <div class="footer__links">
+        <p class="text-strong">Документи</p>
+        <a href="#">Політика конфіденційності</a>
+        <a href="#">Умови використання</a>
+        <a href="index.html#reports">Звіти</a>
+        <a href="index.html#faq">FAQ</a>
+      </div>
+
+      <div class="footer__contact">
+        <p class="text-strong">Контакти</p>
+        <p class="caption">+380 XX XXX XX XX</p>
+        <p class="caption">hello@example.org</p>
+        <p class="caption">© <span id="year"></span> Порятунок Тварин</p>
+      </div>
+    </div>
+    
+    <div class="footer__notice">
+      <div class="container">
+        <p class="footer__notice-text">
+          Всі офіційні фінансові збори ми публікуємо на цьому сайті та на сторінках "Порятунок Тварин" у соцмережах. Ми не несемо відповідальності за збори інших людей чи організацій на нашу підтримку, опубліковані на сторонніх майданчиках.
+        </p>
+        <p class="footer__dev">Розробка та підтримка сайту — <a href="https://markupers.com" target="_blank" rel="noopener"><img src="images/markupers-logo.svg" alt="Markupers" /> Markupers</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top -->
+  <button class="scroll-top" aria-label="Прокрутити вгору">↑</button>
+
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

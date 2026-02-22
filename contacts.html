@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Контакти — Порятунок тварин Львівщини</title>
+  <meta name="description" content="Зв'яжіться з нами для питань про порятунок тварин, волонтерство, донати або іншу інформацію." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a class="brand" href="index.html" aria-label="На головну">
+        <span class="brand__logo" aria-hidden="true">
+          <img src="images/logo.svg" alt="Логотип" />
+        </span>
+        <span class="brand__name">Порятунок Тварин</span>
+      </a>
+
+      <nav class="nav" aria-label="Навігація">
+        <a href="index.html">Головна</a>
+        <a href="about.html">Про нас</a>
+        <a href="gallery.html">Галерея</a>
+        <a href="blog.html">Блог</a>
+        <a href="contacts.html" class="active">Контакти</a>
+        <a href="index.html#help">Як допомогти</a>
+        <a href="index.html#urgent">Термінові збори</a>
+        <a href="index.html#partners">Партнери</a>
+      </nav>
+
+      <div class="header__right">
+        <button class="btn btn--primary" data-action="donate">Донат</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- CONTACT HERO -->
+    <section class="gallery-hero section">
+      <div class="gallery-hero__image">
+        <img src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=1440&h=500&fit=crop" alt="Контакти" onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'1440\' height=\'500\'%3E%3Crect fill=\'%23E5E7EB\' width=\'1440\' height=\'500\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' text-anchor=\'middle\' dy=\'.3em\' fill=\'%236B7280\' font-family=\'sans-serif\' font-size=\'18\'%3EContact Hero%3C/text%3E%3C/svg%3E';" />
+        <div class="gallery-hero__overlay"></div>
+      </div>
+      <div class="container">
+        <div class="gallery-hero__content">
+          <div class="post-breadcrumb">
+            <a href="index.html">Головна</a> / <span>Контакти</span>
+          </div>
+          <h1>Контакти</h1>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT CARDS -->
+    <section class="section">
+      <div class="container">
+        <div class="contact-cards">
+          <div class="contact-card">
+            <div class="contact-card__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="contact-card__content">
+              <h3>Локація</h3>
+              <p>Львів, Львівська область, Україна</p>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-card__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="contact-card__content">
+              <h3>Телефон</h3>
+              <p>+380 XX XXX XX XX</p>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-card__icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <polyline points="22,6 12,13 2,6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="contact-card__content">
+              <h3>Email</h3>
+              <p>hello@example.org</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT FORM -->
+    <section class="section section--alt">
+      <div class="container">
+        <div class="contact-form-wrapper">
+          <div class="section__header">
+            <span class="section-label">Контакти</span>
+            <h2>Надішліть нам повідомлення</h2>
+            <p class="text">
+              Маєте питання або пропозиції? Заповніть форму нижче, і ми зв'яжемося з вами найближчим часом.
+            </p>
+          </div>
+
+          <form class="contact-form" id="contactForm">
+            <div class="contact-form__row">
+              <div class="field-group">
+                <label for="firstName" class="field-label">Ім'я</label>
+                <input type="text" id="firstName" name="firstName" class="field" placeholder="Ваше ім'я" required />
+              </div>
+              <div class="field-group">
+                <label for="lastName" class="field-label">Прізвище</label>
+                <input type="text" id="lastName" name="lastName" class="field" placeholder="Ваше прізвище" required />
+              </div>
+            </div>
+
+            <div class="contact-form__row">
+              <div class="field-group">
+                <label for="email" class="field-label">Email</label>
+                <input type="email" id="email" name="email" class="field" placeholder="your.email@example.com" required />
+              </div>
+              <div class="field-group">
+                <label for="phone" class="field-label">Номер телефону</label>
+                <input type="tel" id="phone" name="phone" class="field" placeholder="+380 XX XXX XX XX" />
+              </div>
+            </div>
+
+            <div class="field-group">
+              <label for="message" class="field-label">Ваше повідомлення</label>
+              <textarea id="message" name="message" class="field field--textarea" rows="6" placeholder="Напишіть ваше повідомлення..." required></textarea>
+            </div>
+
+            <div class="contact-form__actions">
+              <button type="submit" class="btn btn--primary">Надіслати повідомлення</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAP -->
+    <section class="section">
+      <div class="container">
+        <div class="contact-map">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2573.5!2d24.0297!3d49.8397!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473add7c09109a57%3A0x4223c517012378e2!2sLviv%2C%20Lviv%20Oblast%2C%20Ukraine!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus"
+            width="100%"
+            height="450"
+            style="border:0; border-radius: var(--radius-md);"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Карта Львова">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA BANNER -->
+    <section class="section section--alt">
+      <div class="container">
+        <div class="cta-banner">
+          <div class="cta-banner__content">
+            <h2>Кожне життя варте <span class="cta-banner__accent">порятунку</span></h2>
+            <p class="text">Твій донат покриває ліки, операції та перетримку. Твій час — виїзди, доставку і турботу. Разом ми сильніші.</p>
+            <div class="cta-banner__actions">
+              <button class="btn btn--primary" data-action="donate">Підтримати донатом</button>
+              <button class="btn btn--white">Стати волонтером</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <div class="brand">
+          <span class="brand__logo" aria-hidden="true">
+            <img src="images/logo.svg" alt="Логотип" />
+          </span>
+          <span class="brand__name">Порятунок Тварин</span>
+        </div>
+        <p class="caption">Волонтерська спільнота Львівщини. Прозорість, відповідальність, любов до тварин.</p>
+        <div class="social">
+          <a href="#" aria-label="Facebook">FB</a>
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="Telegram">TG</a>
+        </div>
+      </div>
+
+      <div class="footer__links">
+        <p class="text-strong">Навігація</p>
+          <a href="index.html">Головна</a>
+          <a href="about.html">Про нас</a>
+          <a href="gallery.html">Галерея</a>
+          <a href="blog.html">Блог</a>
+          <a href="contacts.html">Контакти</a>
+          <a href="index.html#help">Як допомогти</a>
+          <a href="index.html#urgent">Термінові збори</a>
+          <a href="index.html#partners">Партнери</a>
+      </div>
+
+      <div class="footer__links">
+        <p class="text-strong">Документи</p>
+        <a href="#">Політика конфіденційності</a>
+        <a href="#">Умови використання</a>
+        <a href="index.html#reports">Звіти</a>
+        <a href="index.html#faq">FAQ</a>
+      </div>
+
+      <div class="footer__contact">
+        <p class="text-strong">Контакти</p>
+        <p class="caption">+380 XX XXX XX XX</p>
+        <p class="caption">hello@example.org</p>
+        <p class="caption">© <span id="year"></span> Порятунок Тварин</p>
+      </div>
+    </div>
+    
+    <div class="footer__notice">
+      <div class="container">
+        <p class="footer__notice-text">
+          Всі офіційні фінансові збори ми публікуємо на цьому сайті та на сторінках "Порятунок Тварин" у соцмережах. Ми не несемо відповідальності за збори інших людей чи організацій на нашу підтримку, опубліковані на сторонніх майданчиках.
+        </p>
+        <p class="footer__dev">Розробка та підтримка сайту — <a href="https://markupers.com" target="_blank" rel="noopener"><img src="images/markupers-logo.svg" alt="Markupers" /> Markupers</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top -->
+  <button class="scroll-top" aria-label="Прокрутити вгору">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>

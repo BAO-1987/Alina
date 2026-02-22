@@ -1,0 +1,628 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Порятунок тварин Львівщини — коти та собаки</title>
+  <meta name="description" content="Волонтерська спільнота: порятунок, лікування, стерилізація, перетримка котів і собак Львівщини." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a class="brand" href="#top" aria-label="На головну">
+        <span class="brand__logo" aria-hidden="true">
+          <img src="images/logo.svg" alt="Логотип" />
+        </span>
+        <span class="brand__name">Порятунок Тварин</span>
+      </a>
+
+      <nav class="nav" aria-label="Навігація">
+        <a href="about.html">Про нас</a>
+        <a href="gallery.html">Галерея</a>
+        <a href="blog.html">Блог</a>
+        <a href="contacts.html">Контакти</a>
+        <a href="#help">Як допомогти</a>
+        <a href="#urgent">Термінові збори</a>
+        <a href="#partners">Партнери</a>
+      </nav>
+
+      <div class="header__right">
+        <button class="btn btn--primary" data-action="donate">Донат</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero section">
+      <div class="container">
+        <div class="hero__content">
+          <div class="hero__text">
+            <h1>Допомагаємо <span class="highlight highlight--gradient">котам і собакам</span> Львівщини</h1>
+            <p class="text">
+              Рятуємо, лікуємо, стерилізуємо та організовуємо перетримку. Працюємо <span class="highlight">прозоро</span> — зі звітами та підтримкою спільноти.
+            </p>
+
+            <div class="hero__actions">
+              <button class="btn btn--primary" data-action="donate">Підтримати донатом</button>
+            </div>
+
+            <div class="donate-widget" id="donate">
+              <div class="donate-widget__toggle">
+                <button type="button" class="toggle-btn active" data-period="once">Разовий</button>
+                <button type="button" class="toggle-btn" data-period="monthly">Щомісячний</button>
+              </div>
+
+              <div class="donate-widget__amounts">
+                <button class="chip" type="button" data-amount="100">100</button>
+                <button class="chip" type="button" data-amount="200">200</button>
+                <button class="chip" type="button" data-amount="500">500</button>
+                <button class="chip" type="button" data-amount="1000">1000</button>
+                <button class="chip" type="button" data-amount="other">Інша сума</button>
+              </div>
+
+              <div class="donate-widget__input" style="display: none;">
+                <input type="number" class="input" placeholder="Мінімум 10 грн" min="10" />
+              </div>
+
+              <button class="btn btn--primary donate-widget__submit" type="button">Підтримати</button>
+            </div>
+          </div>
+
+          <div class="hero__media">
+            <div class="hero__image">
+              <img src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=800&h=600&fit=crop" alt="Волонтер з врятованим собакою" onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'800\' height=\'600\'%3E%3Crect fill=\'%23E5E7EB\' width=\'800\' height=\'600\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' text-anchor=\'middle\' dy=\'.3em\' fill=\'%236B7280\' font-family=\'sans-serif\' font-size=\'18\'%3EHero Image%3C/text%3E%3C/svg%3E';" />
+            </div>
+            <div class="hero__overlay">
+              <div class="card">
+                <div class="card__video">
+                  <div class="play-button">▶</div>
+                </div>
+                <div class="card__body">
+                  <p class="card__title">Як ми рятуємо</p>
+                  <p class="caption">Коротка історія про процес порятунку</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- СТАТИСТИКА (як у UAnimals) -->
+    <section class="stats-section section">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-item">
+            <div class="stat-number" data-target="5000" data-suffix="+">0</div>
+            <div class="stat-label">Тварин врятовано</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" data-target="120">0</div>
+            <div class="stat-label">Активних перетримок</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" data-target="48">0</div>
+            <div class="stat-label">Волонтерів</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" data-target="25" data-suffix="+">0</div>
+            <div class="stat-label">Тонн корму передано</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ПРО НАС / SERVICES -->
+    <section id="about" class="section section--alt">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about__media">
+            <div class="about__image">
+              <img src="https://images.unsplash.com/photo-1551717743-49959800b1f6?w=600&h=500&fit=crop" alt="Про нас" onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'600\' height=\'500\'%3E%3Crect fill=\'%23E5E7EB\' width=\'600\' height=\'500\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' text-anchor=\'middle\' dy=\'.3em\' fill=\'%236B7280\' font-family=\'sans-serif\' font-size=\'16\'%3EAbout Image%3C/text%3E%3C/svg%3E';" />
+            </div>
+          </div>
+
+          <div class="about__content">
+            <h2><span class="highlight highlight--gradient">Порятунок</span>, лікування та перетримка</h2>
+            <p class="text">
+              Реагуємо на <span class="highlight">термінові випадки</span>, покриваємо вет-лікування, організовуємо тимчасові домівки та супроводжуємо до прилаштування.
+            </p>
+
+            <div class="features-grid">
+              <div class="feature">
+                <div class="feature__icon">🏥</div>
+                <p class="text-strong"><span class="highlight">Терміновий виїзд</span></p>
+                <p class="caption">Забір з вулиці / небезпечних умов.</p>
+              </div>
+              <div class="feature">
+                <div class="feature__icon">💊</div>
+                <p class="text-strong"><span class="highlight">Ветеринарна допомога</span></p>
+                <p class="caption">Аналізи, операції, реабілітація.</p>
+              </div>
+              <div class="feature">
+                <div class="feature__icon">🏠</div>
+                <p class="text-strong"><span class="highlight">Мережа перетримок</span></p>
+                <p class="caption">Тимчасовий дім до прилаштування.</p>
+              </div>
+              <div class="feature">
+                <div class="feature__icon">✂️</div>
+                <p class="text-strong"><span class="highlight">Стерилізація</span></p>
+                <p class="caption">Профілактика безконтрольного розмноження.</p>
+              </div>
+            </div>
+
+            <a class="btn btn--primary" href="#help">Як допомогти</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ПАРТНЕРИ -->
+    <section id="partners" class="section">
+      <div class="container">
+        <div class="section__header">
+          <h2><span class="highlight highlight--gradient">Партнери</span> та ветклініки</h2>
+          <p class="text">Наші партнери допомагають нам рятувати тварин та надавати якісну ветеринарну допомогу.</p>
+        </div>
+
+        <div class="partners-marquee">
+          <div class="partners-marquee__track">
+            <div class="partners-marquee__list">
+              <div class="partner-logo">
+                <img src="https://via.placeholder.com/180x100/1E8E7E/FFFFFF?text=Ветклініка+1" alt="Партнер 1" onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'180\' height=\'100\'%3E%3Crect fill=\'%231E8E7E\' width=\'180\' height=\'100\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' text-anchor=\'middle\' dy=\'.3em\' fill=\'white\' font-family=\'sans-serif\' font-size=\'14\'%3EВетклініка 1%3C/text%3E%3C/svg%3E';" />
+              </div>
+              <div class="partner-logo">
+                <img src="https://via.placeholder.com/180x100/17786B/FFFFFF?text=Ветклініка+2" alt="Партнер 2" onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'180\' height=\'100\'%3E%3Crect fill=\'%2317786B\' width=\'180\' height=\'100\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' text-anchor=\'middle\' dy=\'.3em\' fill=\'white\' font-family=\'sans-serif\' font-size=\'14\'%3EВетклініка 2%3C/text%3E%3C/svg%3E';" />
+              </div>
+              <div class="partner-logo">
+                <img src="https://via.placeholder.com/180x100/F2C14E/1F2937?text=Партнер+3" alt="Партнер 3" onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'180\' height=\'100\'%3E%3Crect fill=\'%23F2C14E\' width=\'180\' height=\'100\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' text-anchor=\'middle\' dy=\'.3em\' fill=\'%231F2937\' font-family=\'sans-serif\' font-size=\'14\'%3EПартнер 3%3C/text%3E%3C/svg%3E';" />
+              </div>
+              <div class="partner-logo">
+                <img src="https://via.placeholder.com/180x100/1E8E7E/FFFFFF?text=Партнер+4" alt="Партнер 4" onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'180\' height=\'100\'%3E%3Crect fill=\'%231E8E7E\' width=\'180\' height=\'100\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' text-anchor=\'middle\' dy=\'.3em\' fill=\'white\' font-family=\'sans-serif\' font-size=\'14\'%3EПартнер 4%3C/text%3E%3C/svg%3E';" />
+              </div>
+              <div class="partner-logo">
+                <img src="https://via.placeholder.com/180x100/17786B/FFFFFF?text=Партнер+5" alt="Партнер 5" onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'180\' height=\'100\'%3E%3Crect fill=\'%2317786B\' width=\'180\' height=\'100\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' text-anchor=\'middle\' dy=\'.3em\' fill=\'white\' font-family=\'sans-serif\' font-size=\'14\'%3EПартнер 5%3C/text%3E%3C/svg%3E';" />
+              </div>
+              <div class="partner-logo">
+                <img src="https://via.placeholder.com/180x100/F2C14E/1F2937?text=Партнер+6" alt="Партнер 6" onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'180\' height=\'100\'%3E%3Crect fill=\'%23F2C14E\' width=\'180\' height=\'100\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' text-anchor=\'middle\' dy=\'.3em\' fill=\'%231F2937\' font-family=\'sans-serif\' font-size=\'14\'%3EПартнер 6%3C/text%3E%3C/svg%3E';" />
+              </div>
+              <div class="partner-logo">
+                <img src="https://via.placeholder.com/180x100/1E8E7E/FFFFFF?text=Партнер+7" alt="Партнер 7" onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'180\' height=\'100\'%3E%3Crect fill=\'%231E8E7E\' width=\'180\' height=\'100\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' text-anchor=\'middle\' dy=\'.3em\' fill=\'white\' font-family=\'sans-serif\' font-size=\'14\'%3EПартнер 7%3C/text%3E%3C/svg%3E';" />
+              </div>
+              <div class="partner-logo">
+                <img src="https://via.placeholder.com/180x100/17786B/FFFFFF?text=Партнер+8" alt="Партнер 8" onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'180\' height=\'100\'%3E%3Crect fill=\'%2317786B\' width=\'180\' height=\'100\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' text-anchor=\'middle\' dy=\'.3em\' fill=\'white\' font-family=\'sans-serif\' font-size=\'14\'%3EПартнер 8%3C/text%3E%3C/svg%3E';" />
+              </div>
+              <!-- Дублюємо для безперервного циклу -->
+              <div class="partner-logo">
+                <img src="https://via.placeholder.com/180x100/1E8E7E/FFFFFF?text=Ветклініка+1" alt="Партнер 1" onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'180\' height=\'100\'%3E%3Crect fill=\'%231E8E7E\' width=\'180\' height=\'100\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' text-anchor=\'middle\' dy=\'.3em\' fill=\'white\' font-family=\'sans-serif\' font-size=\'14\'%3EВетклініка 1%3C/text%3E%3C/svg%3E';" />
+              </div>
+              <div class="partner-logo">
+                <img src="https://via.placeholder.com/180x100/17786B/FFFFFF?text=Ветклініка+2" alt="Партнер 2" onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'180\' height=\'100\'%3E%3Crect fill=\'%2317786B\' width=\'180\' height=\'100\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' text-anchor=\'middle\' dy=\'.3em\' fill=\'white\' font-family=\'sans-serif\' font-size=\'14\'%3EВетклініка 2%3C/text%3E%3C/svg%3E';" />
+              </div>
+              <div class="partner-logo">
+                <img src="https://via.placeholder.com/180x100/F2C14E/1F2937?text=Партнер+3" alt="Партнер 3" onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'180\' height=\'100\'%3E%3Crect fill=\'%23F2C14E\' width=\'180\' height=\'100\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' text-anchor=\'middle\' dy=\'.3em\' fill=\'%231F2937\' font-family=\'sans-serif\' font-size=\'14\'%3EПартнер 3%3C/text%3E%3C/svg%3E';" />
+              </div>
+              <div class="partner-logo">
+                <img src="https://via.placeholder.com/180x100/1E8E7E/FFFFFF?text=Партнер+4" alt="Партнер 4" onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'180\' height=\'100\'%3E%3Crect fill=\'%231E8E7E\' width=\'180\' height=\'100\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' text-anchor=\'middle\' dy=\'.3em\' fill=\'white\' font-family=\'sans-serif\' font-size=\'14\'%3EПартнер 4%3C/text%3E%3C/svg%3E';" />
+              </div>
+              <div class="partner-logo">
+                <img src="https://via.placeholder.com/180x100/17786B/FFFFFF?text=Партнер+5" alt="Партнер 5" onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'180\' height=\'100\'%3E%3Crect fill=\'%2317786B\' width=\'180\' height=\'100\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' text-anchor=\'middle\' dy=\'.3em\' fill=\'white\' font-family=\'sans-serif\' font-size=\'14\'%3EПартнер 5%3C/text%3E%3C/svg%3E';" />
+              </div>
+              <div class="partner-logo">
+                <img src="https://via.placeholder.com/180x100/F2C14E/1F2937?text=Партнер+6" alt="Партнер 6" onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'180\' height=\'100\'%3E%3Crect fill=\'%23F2C14E\' width=\'180\' height=\'100\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' text-anchor=\'middle\' dy=\'.3em\' fill=\'%231F2937\' font-family=\'sans-serif\' font-size=\'14\'%3EПартнер 6%3C/text%3E%3C/svg%3E';" />
+              </div>
+              <div class="partner-logo">
+                <img src="https://via.placeholder.com/180x100/1E8E7E/FFFFFF?text=Партнер+7" alt="Партнер 7" onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'180\' height=\'100\'%3E%3Crect fill=\'%231E8E7E\' width=\'180\' height=\'100\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' text-anchor=\'middle\' dy=\'.3em\' fill=\'white\' font-family=\'sans-serif\' font-size=\'14\'%3EПартнер 7%3C/text%3E%3C/svg%3E';" />
+              </div>
+              <div class="partner-logo">
+                <img src="https://via.placeholder.com/180x100/17786B/FFFFFF?text=Партнер+8" alt="Партнер 8" onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'180\' height=\'100\'%3E%3Crect fill=\'%2317786B\' width=\'180\' height=\'100\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' text-anchor=\'middle\' dy=\'.3em\' fill=\'white\' font-family=\'sans-serif\' font-size=\'14\'%3EПартнер 8%3C/text%3E%3C/svg%3E';" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ТЕРМІНОВІ ЗБОРИ -->
+    <section id="urgent" class="section section--alt">
+      <div class="container">
+        <div class="section__header">
+          <h2><span class="highlight highlight--gradient">Термінові</span> збори</h2>
+          <p class="text">Найнагальніші витрати: операції, ліки, транспорт і перетримка.</p>
+        </div>
+
+        <div class="cards-grid">
+          <article class="card card--interactive">
+            <div class="card__image">
+              <img src="https://images.unsplash.com/photo-1605568427561-40dd23c2acea?w=400&h=300&fit=crop" alt="Термінова операція" onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'300\'%3E%3Crect fill=\'%23FF6B6B\' width=\'400\' height=\'300\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' text-anchor=\'middle\' dy=\'.3em\' fill=\'white\' font-family=\'sans-serif\' font-size=\'14\'%3EUrgent 1%3C/text%3E%3C/svg%3E';" />
+              <span class="badge badge--urgent">Терміново</span>
+            </div>
+            <div class="card__body">
+              <p class="card__title">Фонд на невідкладну операцію</p>
+              <p class="caption">Невідкладна операція для пораненого пса. Потрібна допомога ветеринарів та ліки.</p>
+              <div class="progress">
+                <div class="progress__bar progress__bar--urgent" style="width: 62%"></div>
+              </div>
+              <div class="progress__info">
+                <span class="caption">Зібрано: 15 500 грн</span>
+                <span class="caption">Ціль: 25 000 грн</span>
+              </div>
+              <button class="btn btn--primary" type="button">Підтримати</button>
+            </div>
+          </article>
+
+          <article class="card card--interactive">
+            <div class="card__image">
+              <img src="https://images.unsplash.com/photo-1583336663277-620dc1996580?w=400&h=300&fit=crop" alt="Ліки" onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'300\'%3E%3Crect fill=\'%23FF6B6B\' width=\'400\' height=\'300\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' text-anchor=\'middle\' dy=\'.3em\' fill=\'white\' font-family=\'sans-serif\' font-size=\'14\'%3EUrgent 2%3C/text%3E%3C/svg%3E';" />
+              <span class="badge badge--urgent">Терміново</span>
+            </div>
+            <div class="card__body">
+              <p class="card__title">Пакет ліків на місяць</p>
+              <p class="caption">Ліки для тварин на перетримці та реабілітації. Антибіотики, знеболювальні, вітаміни.</p>
+              <div class="progress">
+                <div class="progress__bar progress__bar--urgent" style="width: 41%"></div>
+              </div>
+              <div class="progress__info">
+                <span class="caption">Зібрано: 4 900 грн</span>
+                <span class="caption">Ціль: 12 000 грн</span>
+              </div>
+              <button class="btn btn--primary" type="button">Підтримати</button>
+            </div>
+          </article>
+
+          <article class="card card--interactive">
+            <div class="card__image">
+              <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=400&h=300&fit=crop" alt="Транспорт" onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'300\'%3E%3Crect fill=\'%23FF6B6B\' width=\'400\' height=\'300\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' text-anchor=\'middle\' dy=\'.3em\' fill=\'white\' font-family=\'sans-serif\' font-size=\'14\'%3EUrgent 3%3C/text%3E%3C/svg%3E';" />
+              <span class="badge badge--urgent">Терміново</span>
+            </div>
+            <div class="card__body">
+              <p class="card__title">Підтримка виїздів та доставки</p>
+              <p class="caption">Пальне для виїздів до тварин, доставка до ветклінік, транспорт для перетримок.</p>
+              <div class="progress">
+                <div class="progress__bar progress__bar--normal" style="width: 73%"></div>
+              </div>
+              <div class="progress__info">
+                <span class="caption">Зібрано: 5 800 грн</span>
+                <span class="caption">Ціль: 8 000 грн</span>
+              </div>
+              <button class="btn btn--primary" type="button">Підтримати</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ПРОЦЕС ПОРЯТУНКУ / STEPS -->
+    <section id="steps" class="section">
+      <div class="container">
+        <div class="section__header">
+          <h2>Ваш новий улюбленець чекає на <span class="highlight highlight--gradient">порятунок</span></h2>
+          <p class="text">Три кроки, щоб зрозуміти логіку нашого процесу.</p>
+        </div>
+
+        <div class="cards-grid">
+          <article class="card step-card">
+            <div class="step-card__number">01</div>
+            <div class="card__body">
+              <p class="card__title">Обрати тварину</p>
+              <p class="caption">Повідомлення, фото, локація. Оцінка терміновості та планування дій.</p>
+            </div>
+            <div class="step-card__icon">🐾</div>
+          </article>
+
+          <article class="card step-card">
+            <div class="step-card__number">02</div>
+            <div class="card__body">
+              <p class="card__title">Допомога та лікування</p>
+              <p class="caption">Виїзд/доставка, лікування, стерилізація, відновлення здоров'я.</p>
+            </div>
+          </article>
+
+          <article class="card step-card">
+            <div class="step-card__number">03</div>
+            <div class="card__body">
+              <p class="card__title">Перетримка / прилаштування</p>
+              <p class="caption">Тимчасовий дім, співбесіда, відповідальні умови та новий дім.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="animal-strip">
+          <img src="https://images.unsplash.com/photo-1526336024174-e58f5cdd8e13?w=1200&h=400&fit=crop" alt="Кіт" onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'1200\' height=\'400\'%3E%3Crect fill=\'%23E5E7EB\' width=\'1200\' height=\'400\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' text-anchor=\'middle\' dy=\'.3em\' fill=\'%236B7280\' font-family=\'sans-serif\' font-size=\'14\'%3EAnimals Strip%3C/text%3E%3C/svg%3E';" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ЯК ДОПОМОГТИ / SERVICES CARDS -->
+    <section id="help" class="section section--alt">
+      <div class="container">
+        <div class="section__header">
+          <h2>Як <span class="highlight highlight--gradient">допомогти</span> тваринам</h2>
+          <p class="text">Обери зручний формат — <span class="highlight">кожен внесок важливий</span>.</p>
+        </div>
+
+        <div class="cards-grid">
+          <article class="card card--interactive">
+            <div class="card__image">
+              <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=400&h=300&fit=crop" alt="Донат" onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'300\'%3E%3Crect fill=\'%231E8E7E\' width=\'400\' height=\'300\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' text-anchor=\'middle\' dy=\'.3em\' fill=\'white\' font-family=\'sans-serif\' font-size=\'14\'%3EHelp 1%3C/text%3E%3C/svg%3E';" />
+            </div>
+            <div class="card__body">
+              <p class="card__title">Донат на лікування</p>
+              <p class="caption">Фінансова підтримка на лікування, операції, корм та перетримку тварин.</p>
+              <button class="btn btn--primary" type="button" data-action="donate">Підтримати</button>
+            </div>
+          </article>
+
+          <article class="card card--interactive">
+            <div class="card__image">
+              <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=400&h=300&fit=crop" alt="Волонтерство" onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'300\'%3E%3Crect fill=\'%23F2C14E\' width=\'400\' height=\'300\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' text-anchor=\'middle\' dy=\'.3em\' fill=\'%231F2937\' font-family=\'sans-serif\' font-size=\'14\'%3EHelp 2%3C/text%3E%3C/svg%3E';" />
+            </div>
+            <div class="card__body">
+              <p class="card__title">Волонтерство</p>
+              <p class="caption">Доставка, виїзди, допомога на подіях, логістика та координація.</p>
+              <button class="btn btn--secondary" type="button">Долучитися</button>
+            </div>
+          </article>
+
+          <article class="card card--interactive">
+            <div class="card__image">
+              <img src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=400&h=300&fit=crop" alt="Перетримка" onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'300\'%3E%3Crect fill=\'%23E5E7EB\' width=\'400\' height=\'300\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' text-anchor=\'middle\' dy=\'.3em\' fill=\'%236B7280\' font-family=\'sans-serif\' font-size=\'14\'%3EHelp 3%3C/text%3E%3C/svg%3E';" />
+            </div>
+            <div class="card__body">
+              <p class="card__title">Перетримка</p>
+              <p class="caption">Тимчасовий дім для кота або собаки до прилаштування в постійну родину.</p>
+              <button class="btn btn--outline" type="button">Написати</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ВІДГУКИ -->
+    <section id="testimonials" class="section">
+      <div class="container">
+        <div class="testimonials-grid">
+          <div class="testimonials__header">
+            <h2>Побачте думку наших коханих донорів</h2>
+          </div>
+          <div class="testimonials__text">
+            <p class="text">Коротко про досвід співпраці зі спільнотою.</p>
+          </div>
+        </div>
+
+        <div class="cards-grid">
+          <article class="card">
+            <div class="card__body">
+              <div class="stars">★★★★★</div>
+              <p class="text" style="margin:10px 0 0;">
+                "Швидко відреагували на звернення. Надали план дій і реально довели кейс до одужання."
+              </p>
+              <div class="person">
+                <span class="avatar" aria-hidden="true"></span>
+                <div>
+                  <div class="text-strong">Ірина</div>
+                  <div class="caption">донорка</div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card__body">
+              <div class="stars">★★★★★</div>
+              <p class="text" style="margin:10px 0 0;">
+                "Прозорі збори та зрозуміла комунікація. Є звіти, фото і оновлення по кожному терміновому випадку."
+              </p>
+              <div class="person">
+                <span class="avatar" aria-hidden="true"></span>
+                <div>
+                  <div class="text-strong">Олег</div>
+                  <div class="caption">волонтер</div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card__body">
+              <div class="stars">★★★★★</div>
+              <p class="text" style="margin:10px 0 0;">
+                "Підказали по перетримці, підтримали кормом і консультаціями. Дуже людяний підхід."
+              </p>
+              <div class="person">
+                <span class="avatar" aria-hidden="true"></span>
+                <div>
+                  <div class="text-strong">Марія</div>
+                  <div class="caption">перетримка</div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA BANNER -->
+    <section class="cta-banner cta-banner--full">
+      <div class="cta-banner__content">
+        <h2>Кожне життя варте <span class="cta-banner__accent">порятунку</span></h2>
+        <p class="text">Твій донат покриває ліки, операції та перетримку. Твій час — виїзди, доставку і турботу. Разом ми сильніші.</p>
+        <div class="cta-banner__actions">
+          <button class="btn btn--primary" data-action="donate">Підтримати донатом</button>
+          <button class="btn btn--white">Стати волонтером</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- НОВИНИ / ЗВІТИ -->
+    <section id="reports" class="section">
+      <div class="container">
+        <div class="section__header">
+          <h2>Залишайся в курсі з <span class="highlight highlight--gradient">Порятунком Тварин</span></h2>
+          <p class="text">Оновлення по кейсах, підсумкові звіти, історії порятунку.</p>
+        </div>
+
+        <div class="cards-grid">
+          <article class="card card--interactive">
+            <div class="card__image">
+              <img src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=400&h=300&fit=crop" alt="Новини" onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'300\'%3E%3Crect fill=\'%23E5E7EB\' width=\'400\' height=\'300\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' text-anchor=\'middle\' dy=\'.3em\' fill=\'%236B7280\' font-family=\'sans-serif\' font-size=\'14\'%3ENews 1%3C/text%3E%3C/svg%3E';" />
+            </div>
+            <div class="card__body">
+              <p class="card__title">10 важливих порад для здоров'я вашої тварини</p>
+              <p class="caption">Корисні рекомендації щодо догляду, харчування та профілактики захворювань.</p>
+              <button class="btn btn--link" type="button">Читати більше →</button>
+            </div>
+          </article>
+
+          <article class="card card--interactive">
+            <div class="card__image">
+              <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=400&h=300&fit=crop" alt="Новини" onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'300\'%3E%3Crect fill=\'%23E5E7EB\' width=\'400\' height=\'300\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' text-anchor=\'middle\' dy=\'.3em\' fill=\'%236B7280\' font-family=\'sans-serif\' font-size=\'14\'%3ENews 2%3C/text%3E%3C/svg%3E';" />
+            </div>
+            <div class="card__body">
+              <p class="card__title">Як обрати правильний корм для вашого улюбленця</p>
+              <p class="caption">Поради щодо вибору якісного харчування для котів та собак різного віку.</p>
+              <button class="btn btn--link" type="button">Читати більше →</button>
+            </div>
+          </article>
+
+          <article class="card card--interactive">
+            <div class="card__image">
+              <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=400&h=300&fit=crop" alt="Новини" onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'300\'%3E%3Crect fill=\'%23E5E7EB\' width=\'400\' height=\'300\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' text-anchor=\'middle\' dy=\'.3em\' fill=\'%236B7280\' font-family=\'sans-serif\' font-size=\'14\'%3ENews 3%3C/text%3E%3C/svg%3E';" />
+            </div>
+            <div class="card__body">
+              <p class="card__title">Важливість регулярних візитів до ветеринара</p>
+              <p class="caption">Чому профілактичні огляди важливі для здоров'я та довголіття тварин.</p>
+              <button class="btn btn--link" type="button">Читати більше →</button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="section section--alt">
+      <div class="container">
+        <div class="faq-grid">
+          <div class="faq__content">
+            <h2>Часті запитання</h2>
+            <p class="text">Короткі відповіді про донати, волонтерство, перетримки та звіти.</p>
+
+            <div class="faq-list">
+              <details class="faq-item">
+                <summary>Як ви звітуєте про використання коштів?</summary>
+                <p class="caption">Публікуємо оновлення по кейсах і підсумкові звіти (розділ "Новини та звіти").</p>
+              </details>
+
+              <details class="faq-item">
+                <summary>Як стати волонтером?</summary>
+                <p class="caption">Напишіть через форму в "Контакти". Ми запропонуємо задачі за вашим ресурсом (доставка/виїзди/події/перетримка).</p>
+              </details>
+
+              <details class="faq-item">
+                <summary>Чи потрібен досвід для перетримки?</summary>
+                <p class="caption">Не завжди. Пояснюємо базу та допомагаємо з процесом. Головне — відповідальність і безпека.</p>
+              </details>
+
+              <details class="faq-item">
+                <summary>Що робити, якщо я знайшов тварину вночі?</summary>
+                <p class="caption">Зафіксуйте локацію, забезпечте тепло/воду, зробіть фото і залиште заявку. За критичного стану — ветдопомога.</p>
+              </details>
+
+              <details class="faq-item">
+                <summary>Як працює процес прилаштування?</summary>
+                <p class="caption">Після лікування та реабілітації ми шукаємо відповідальну родину через співбесіду та перевірку умов.</p>
+              </details>
+
+              <details class="faq-item">
+                <summary>Чи можна відстежити конкретну тварину?</summary>
+                <p class="caption">Так, ми публікуємо оновлення по кейсах у розділі "Історії порятунку" та соцмережах.</p>
+              </details>
+            </div>
+          </div>
+
+          <div class="faq__image">
+            <div class="faq-image-wrapper">
+              <img src="https://images.unsplash.com/photo-1551717743-49959800b1f6?w=500&h=500&fit=crop" alt="FAQ" onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'500\' height=\'500\'%3E%3Crect fill=\'%23E5E7EB\' width=\'500\' height=\'500\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' text-anchor=\'middle\' dy=\'.3em\' fill=\'%236B7280\' font-family=\'sans-serif\' font-size=\'16\'%3EFAQ Image%3C/text%3E%3C/svg%3E';" />
+              <div class="stat-badge stat-badge--overlay">
+                <div class="stat-num">48</div>
+                <div class="stat-txt">волонтерів</div>
+              </div>
+              <div class="stat-badge stat-badge--overlay stat-badge--bottom">
+                <div class="stat-num">120</div>
+                <div class="stat-txt">перетримок</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <div class="brand">
+          <span class="brand__logo" aria-hidden="true">
+            <img src="images/logo.svg" alt="Логотип" />
+          </span>
+          <span class="brand__name">Порятунок Тварин</span>
+        </div>
+        <p class="caption">Волонтерська спільнота Львівщини. Прозорість, відповідальність, любов до тварин.</p>
+        <div class="social">
+          <a href="#" aria-label="Facebook">FB</a>
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="Telegram">TG</a>
+        </div>
+      </div>
+
+      <div class="footer__links">
+        <p class="text-strong">Навігація</p>
+          <a href="about.html">Про нас</a>
+          <a href="gallery.html">Галерея</a>
+          <a href="blog.html">Блог</a>
+          <a href="contacts.html">Контакти</a>
+          <a href="#help">Як допомогти</a>
+          <a href="#urgent">Термінові збори</a>
+          <a href="#partners">Партнери</a>
+      </div>
+
+      <div class="footer__links">
+        <p class="text-strong">Документи</p>
+        <a href="#">Політика конфіденційності</a>
+        <a href="#">Умови використання</a>
+        <a href="#reports">Звіти</a>
+        <a href="#faq">FAQ</a>
+      </div>
+
+      <div class="footer__contact">
+        <p class="text-strong">Контакти</p>
+        <p class="caption">+380 XX XXX XX XX</p>
+        <p class="caption">hello@example.org</p>
+        <p class="caption">© <span id="year"></span> Порятунок Тварин</p>
+      </div>
+    </div>
+    
+    <div class="footer__notice">
+      <div class="container">
+        <p class="footer__notice-text">
+          Всі офіційні фінансові збори ми публікуємо на цьому сайті та на сторінках "Порятунок Тварин" у соцмережах. Ми не несемо відповідальності за збори інших людей чи організацій на нашу підтримку, опубліковані на сторонніх майданчиках.
+        </p>
+        <p class="footer__dev">Розробка та підтримка сайту — <a href="https://markupers.com" target="_blank" rel="noopener"><img src="images/markupers-logo.svg" alt="Markupers" /> Markupers</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top -->
+  <button class="scroll-top" aria-label="Прокрутити вгору">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>

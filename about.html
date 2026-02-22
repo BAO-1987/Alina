@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Про нас — Порятунок тварин Львівщини</title>
+  <meta name="description" content="Дізнайтеся більше про нашу волонтерську спільноту, яка рятує та допомагає котам і собакам Львівщини." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css" />
+</head>
+
+<body>
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a class="brand" href="index.html" aria-label="На головну">
+        <span class="brand__logo" aria-hidden="true">
+          <img src="images/logo.svg" alt="Логотип" />
+        </span>
+        <span class="brand__name">Порятунок Тварин</span>
+      </a>
+
+      <nav class="nav" aria-label="Навігація">
+        <a href="index.html">Головна</a>
+        <a href="about.html" class="active">Про нас</a>
+        <a href="gallery.html">Галерея</a>
+        <a href="blog.html">Блог</a>
+        <a href="contacts.html">Контакти</a>
+        <a href="index.html#help">Як допомогти</a>
+        <a href="index.html#urgent">Термінові збори</a>
+        <a href="index.html#partners">Партнери</a>
+      </nav>
+
+      <div class="header__right">
+        <button class="btn btn--primary" data-action="donate">Донат</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="about-hero section">
+      <div class="about-hero__image">
+        <img src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=1440&h=600&fit=crop" alt="Волонтери з тваринами" onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'1440\' height=\'600\'%3E%3Crect fill=\'%23E5E7EB\' width=\'1440\' height=\'600\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' text-anchor=\'middle\' dy=\'.3em\' fill=\'%236B7280\' font-family=\'sans-serif\' font-size=\'18\'%3EAbout Hero%3C/text%3E%3C/svg%3E';" />
+        <div class="about-hero__overlay"></div>
+      </div>
+      <div class="container">
+        <div class="about-hero__content">
+          <div class="post-breadcrumb">
+            <a href="index.html">Головна</a> / <span>Про нас</span>
+          </div>
+          <h1>Про нас</h1>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTRODUCTION SECTION -->
+    <section class="section history-intro">
+      <div class="container">
+        <div class="history-intro__content">
+          <div class="history-intro__text">
+            <h2>З 2016 року Порятунок Тварин пропагує гуманне ставлення до тварин та захищає їх від експлуатації і знущань</h2>
+            <p class="text">
+              За цей час нам вдалося врятувати тисячі тварин, організувати мережу перетримок по всій Львівщині, налагодити співпрацю з десятками ветклінік та донорів, а також домогтися прийняття кількох важливих рішень на місцевому рівні.
+            </p>
+            <p class="text">
+              З початком повномасштабної війни наші зусилля зосереджені на порятунку тварин із зони бойових дій та наданні невідкладної ветеринарної допомоги постраждалим тваринам.
+            </p>
+          </div>
+          <div class="history-intro__video">
+            <div class="video-thumbnail">
+              <img src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=400&h=400&fit=crop" alt="Відео про нас" onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'400\'%3E%3Crect fill=\'%23E5E7EB\' width=\'400\' height=\'400\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' text-anchor=\'middle\' dy=\'.3em\' fill=\'%236B7280\' font-family=\'sans-serif\' font-size=\'16\'%3EVideo%3C/text%3E%3C/svg%3E';" />
+              <div class="video-play-button">▶</div>
+              <p class="video-caption">Про Порятунок Тварин за 100 секунд</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HISTORY WRAPPER (sticky timeline + year sections) -->
+    <div class="history-wrapper">
+      <div class="history-timeline">
+        <div class="container">
+          <div class="timeline-line">
+            <div class="timeline-dot" data-year="2016" data-section="year-2016"></div>
+            <div class="timeline-dot" data-year="2017" data-section="year-2017"></div>
+            <div class="timeline-dot" data-year="2018" data-section="year-2018"></div>
+            <div class="timeline-dot" data-year="2019" data-section="year-2019"></div>
+            <div class="timeline-dot" data-year="2020" data-section="year-2020"></div>
+            <div class="timeline-dot" data-year="2021" data-section="year-2021"></div>
+            <div class="timeline-dot" data-year="2022" data-section="year-2022"></div>
+            <div class="timeline-dot" data-year="2023" data-section="year-2023"></div>
+            <div class="timeline-dot" data-year="2024" data-section="year-2024"></div>
+          </div>
+        </div>
+      </div>
+
+    <!-- 2016 SECTION -->
+    <section id="year-2016" class="section history-year section--alt">
+      <div class="container">
+        <div class="history-year__content">
+          <div class="history-year__header">
+            <div class="history-year__number">2016</div>
+            <h2>ЗАСНУВАННЯ СПІЛЬНОТИ</h2>
+          </div>
+          <div class="history-year__body">
+            <div class="history-year__text">
+              <p class="text">
+                Волонтерська спільнота "Порятунок Тварин" була заснована у 2016 році групою небайдужих людей, які вирішили об'єднатися для системної допомоги бездомним тваринам Львівщини.
+              </p>
+              <p class="text">
+                За перший рік роботи нам вдалося організувати перші перетримки, налагодити співпрацю з місцевими ветклініками та провести низку успішних кампаній з прилаштування тварин. Також ми провели перші акції, що привернули увагу суспільства до проблеми бездомних тварин.
+              </p>
+            </div>
+            <div class="history-year__images">
+              <div class="history-image history-image--large">
+                <img src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=600&h=400&fit=crop" alt="2016 - Заснування" onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'600\' height=\'400\'%3E%3Crect fill=\'%23E5E7EB\' width=\'600\' height=\'400\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' text-anchor=\'middle\' dy=\'.3em\' fill=\'%236B7280\' font-family=\'sans-serif\' font-size=\'16\'%3E2016 Image%3C/text%3E%3C/svg%3E';" />
+              </div>
+              <div class="history-image">
+                <img src="https://images.unsplash.com/photo-1551717743-49959800b1f6?w=400&h=300&fit=crop" alt="Перші перетримки" onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'300\'%3E%3Crect fill=\'%23E5E7EB\' width=\'400\' height=\'300\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' text-anchor=\'middle\' dy=\'.3em\' fill=\'%236B7280\' font-family=\'sans-serif\' font-size=\'14\'%3E2016 Image 2%3C/text%3E%3C/svg%3E';" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2017 SECTION -->
+    <section id="year-2017" class="section history-year">
+      <div class="container">
+        <div class="history-year__content">
+          <div class="history-year__header">
+            <div class="history-year__number">2017</div>
+            <h2>ЛЮДИ, ЯКІ ДОПОМАГАЮТЬ</h2>
+          </div>
+          <div class="history-year__body">
+            <div class="history-year__text">
+              <p class="text">
+                У 2017 році Порятунок Тварин продовжила свою роботу з порятунку та захисту тварин. Було проведено низку акцій та кампаній, спрямованих на підвищення обізнаності суспільства щодо проблем бездомних тварин та необхідності відповідального ставлення до них.
+              </p>
+              <p class="text">
+                Завдяки підтримці волонтерів та небайдужих громадян, вдалося досягти значних результатів: розширити мережу перетримок, налагодити системну співпрацю з ветклініками та організувати регулярні збори коштів на лікування та стерилізацію тварин.
+              </p>
+            </div>
+            <div class="history-year__images">
+              <div class="history-image history-image--large">
+                <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=600&h=400&fit=crop" alt="2017 - Волонтери" onerror="this.onerror=null; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'600\' height=\'400\'%3E%3Crect fill=\'%23E5E7EB\' width=\'600\' height=\'400\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' text-anchor=\'middle\' dy=\'.3em\' fill=\'%236B7280\' font-family=\'sans-serif\' font-size=\'16\'%3E2017 Image%3C/text%3E%3C/svg%3E';" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    </div><!-- /.history-wrapper -->
+
+    <!-- SAVED ANIMALS GALLERY -->
+    <section class="section section--alt">
+      <div class="container">
+        <div class="section__header">
+          <h2>Врятовані тварини</h2>
+          <p class="text">Кожна тварина отримала шанс на щасливе життя завдяки нашій спільноті.</p>
+        </div>
+
+        <div class="gallery-masonry">
+          <div class="gallery-item">
+            <a href="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=1200&h=900&fit=crop" data-fancybox="about-gallery" data-caption="Врятована тварина">
+              <img src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=400&h=600&fit=crop" alt="Врятована тварина" />
+            </a>
+          </div>
+          <div class="gallery-item">
+            <a href="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=1200&h=900&fit=crop" data-fancybox="about-gallery" data-caption="Врятована тварина">
+              <img src="https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=400&h=400&fit=crop" alt="Врятована тварина" />
+            </a>
+          </div>
+          <div class="gallery-item">
+            <a href="https://images.unsplash.com/photo-1551717743-49959800b1f6?w=1200&h=900&fit=crop" data-fancybox="about-gallery" data-caption="Врятована тварина">
+              <img src="https://images.unsplash.com/photo-1551717743-49959800b1f6?w=400&h=500&fit=crop" alt="Врятована тварина" />
+            </a>
+          </div>
+          <div class="gallery-item">
+            <a href="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=1200&h=900&fit=crop" data-fancybox="about-gallery" data-caption="Врятована тварина">
+              <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?w=400&h=700&fit=crop" alt="Врятована тварина" />
+            </a>
+          </div>
+          <div class="gallery-item">
+            <a href="https://images.unsplash.com/photo-1583336663277-620dc1996580?w=1200&h=900&fit=crop" data-fancybox="about-gallery" data-caption="Врятована тварина">
+              <img src="https://images.unsplash.com/photo-1583336663277-620dc1996580?w=400&h=350&fit=crop" alt="Врятована тварина" />
+            </a>
+          </div>
+          <div class="gallery-item">
+            <a href="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=1200&h=900&fit=crop" data-fancybox="about-gallery" data-caption="Врятована тварина">
+              <img src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=400&h=450&fit=crop" alt="Врятована тварина" />
+            </a>
+          </div>
+        </div>
+
+        <div class="gallery-actions">
+          <a href="gallery.html" class="btn btn--primary">Переглянути всі</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA BANNER -->
+    <section class="section">
+      <div class="container">
+        <div class="cta-banner">
+          <div class="cta-banner__content">
+            <h2>Кожне життя варте <span class="cta-banner__accent">порятунку</span></h2>
+            <p class="text">Твій донат покриває ліки, операції та перетримку. Твій час — виїзди, доставку і турботу. Разом ми сильніші.</p>
+            <div class="cta-banner__actions">
+              <button class="btn btn--primary" data-action="donate">Підтримати донатом</button>
+              <button class="btn btn--white">Стати волонтером</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <div class="brand">
+          <span class="brand__logo" aria-hidden="true">
+            <img src="images/logo.svg" alt="Логотип" />
+          </span>
+          <span class="brand__name">Порятунок Тварин</span>
+        </div>
+        <p class="caption">Волонтерська спільнота Львівщини. Прозорість, відповідальність, любов до тварин.</p>
+        <div class="social">
+          <a href="#" aria-label="Facebook">FB</a>
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="Telegram">TG</a>
+        </div>
+      </div>
+
+      <div class="footer__links">
+        <p class="text-strong">Навігація</p>
+          <a href="index.html">Головна</a>
+          <a href="about.html">Про нас</a>
+          <a href="gallery.html">Галерея</a>
+          <a href="blog.html">Блог</a>
+          <a href="contacts.html">Контакти</a>
+          <a href="index.html#help">Як допомогти</a>
+          <a href="index.html#urgent">Термінові збори</a>
+          <a href="index.html#partners">Партнери</a>
+      </div>
+
+      <div class="footer__links">
+        <p class="text-strong">Документи</p>
+        <a href="#">Політика конфіденційності</a>
+        <a href="#">Умови використання</a>
+        <a href="index.html#reports">Звіти</a>
+        <a href="index.html#faq">FAQ</a>
+      </div>
+
+      <div class="footer__contact">
+        <p class="text-strong">Контакти</p>
+        <p class="caption">+380 XX XXX XX XX</p>
+        <p class="caption">hello@example.org</p>
+        <p class="caption">© <span id="year"></span> Порятунок Тварин</p>
+      </div>
+    </div>
+    
+    <div class="footer__notice">
+      <div class="container">
+        <p class="footer__notice-text">
+          Всі офіційні фінансові збори ми публікуємо на цьому сайті та на сторінках "Порятунок Тварин" у соцмережах. Ми не несемо відповідальності за збори інших людей чи організацій на нашу підтримку, опубліковані на сторонніх майданчиках.
+        </p>
+        <p class="footer__dev">Розробка та підтримка сайту — <a href="https://markupers.com" target="_blank" rel="noopener"><img src="images/markupers-logo.svg" alt="Markupers" /> Markupers</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top -->
+  <button class="scroll-top" aria-label="Прокрутити вгору">↑</button>
+
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,998 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Волонтери порятунку тварин Львівщини — коти та собаки</title>
+  <meta name="description" content="Волонтерська спільнота: порятунок, лікування, стерилізація, перетримка котів і собак Львівщини." />
+
+  <!-- Опційно: Аналітика (GTM/GA4) -->
+  <!-- Встав GTM <script> сюди (head) -->
+
+  <style>
+    :root{
+      /* Палітра зі скріншота (наближено) */
+      --primary: #D9B7B0;      /* пудрово-рожевий */
+      --primary-soft:#E0C4C0;  /* м’який рожевий */
+      --secondary:#AABFB5;     /* sage */
+      --bg:#FBFBFB;
+      --surface:#FFFFFF;
+      --text:#524840;
+      --muted:#54504C;
+      --border:#E8E8E8;
+
+      --shadow-sm: 0 1px 2px rgba(0,0,0,.06);
+      --shadow-md: 0 6px 16px -6px rgba(0,0,0,.12);
+
+      --radius-sm: 12px;
+      --radius-md: 14px;
+      --radius-lg: 16px;
+
+      --container: 1200px;   /* Desktop 1440 з великими полями */
+      --gutter: 24px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Helvetica Neue", sans-serif;
+      color:var(--text);
+      background:var(--bg);
+      line-height:1.5;
+    }
+    img{max-width:100%; display:block}
+    a{color:inherit; text-decoration:none}
+    .container{max-width:var(--container); margin:0 auto; padding:0 var(--gutter)}
+
+    /* Типографіка: ТІЛЬКИ H1/H2 */
+    h1{font-size:40px; line-height:48px; margin:0 0 12px; letter-spacing:-.5px}
+    h2{font-size:28px; line-height:36px; margin:0 0 12px; letter-spacing:-.2px}
+    .text{font-size:16px; line-height:24px; color:var(--muted)}
+    .text-strong{font-weight:600; color:var(--text)}
+    .caption{font-size:13px; line-height:18px; color:var(--muted)}
+    .eyebrow{font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:var(--primary); font-weight:800}
+
+    .section{padding:72px 0}
+    .section--alt{background:var(--surface)}
+    .grid-2{display:grid; grid-template-columns: 1fr 1fr; gap:48px; align-items:center}
+    .grid-3{display:grid; grid-template-columns: repeat(3, 1fr); gap:24px}
+    .divider{height:1px; background:var(--border); margin:48px 0}
+
+    /* Header */
+    .header{
+      position:sticky; top:0; z-index:10;
+      background:rgba(251,251,251,.85);
+      backdrop-filter: blur(10px);
+      border-bottom:1px solid var(--border);
+    }
+    .header__inner{display:flex; align-items:center; justify-content:space-between; padding:12px 0; gap:16px}
+    .brand{display:flex; align-items:center; gap:12px; min-width:240px}
+    .brand__logo{
+      width:44px; height:44px; border-radius:14px;
+      border:1px solid var(--border);
+      background:var(--surface);
+      display:grid; place-items:center;
+      box-shadow:var(--shadow-sm);
+      overflow:hidden;
+    }
+    .brand__logo img{width:100%; height:100%; object-fit:contain; padding:6px}
+    .brand__name{display:flex; flex-direction:column; line-height:1.2}
+    .brand__name .t{font-weight:800}
+    .brand__name .s{font-size:12px; color:var(--muted)}
+    .nav{display:flex; align-items:center; gap:18px; flex-wrap:wrap; justify-content:center}
+    .nav a{font-size:14px; color:var(--muted)}
+    .nav a:hover{color:var(--text)}
+    .header__right{display:flex; align-items:center; gap:12px}
+
+    /* Buttons */
+    .btn{
+      height:48px;
+      padding:0 16px;
+      border-radius:12px;
+      display:inline-flex; align-items:center; justify-content:center;
+      gap:8px;
+      border:1px solid transparent;
+      cursor:pointer;
+      user-select:none;
+      font-weight:700;
+      box-shadow:var(--shadow-sm);
+      background:transparent;
+      white-space:nowrap;
+    }
+    .btn--primary{background:var(--primary); color:#fff}
+    .btn--primary:hover{filter:brightness(.97)}
+    .btn--outline{border-color:var(--border); background:var(--surface); color:var(--text); box-shadow:none}
+    .btn--outline:hover{background:#FAFAF9}
+    .btn--secondary{background:var(--secondary); color:var(--text)}
+    .btn--link{border:none; box-shadow:none; padding:0; height:auto; color:var(--primary); background:transparent}
+
+    /* Cards */
+    .card{
+      background:var(--surface);
+      border:1px solid var(--border);
+      border-radius:var(--radius-lg);
+      box-shadow:var(--shadow-sm);
+      overflow:hidden;
+    }
+    .card__body{padding:18px}
+    .card__title{margin:0 0 8px; font-weight:800}
+    .card__meta{display:flex; gap:10px; flex-wrap:wrap}
+
+    /* Badges */
+    .badge{
+      display:inline-flex; align-items:center; gap:6px;
+      padding:6px 10px;
+      border-radius:999px;
+      font-size:12px;
+      font-weight:800;
+      background:#F3F4F6;
+      color:var(--text);
+    }
+    .badge--urgent{background:var(--primary); color:#fff}
+
+    /* Hero */
+    .hero{padding:56px 0 64px}
+    .hero__media{
+      position:relative;
+      border-radius:24px;
+      overflow:hidden;
+      box-shadow:var(--shadow-md);
+      background:linear-gradient(135deg, rgba(217,183,176,.4), rgba(170,191,181,.35));
+      min-height:420px;
+      border:1px solid var(--border);
+    }
+    .hero__media img{width:100%; height:100%; object-fit:cover}
+    .hero__overlay{
+      position:absolute;
+      left:24px;
+      bottom:-36px;
+      width:320px;
+    }
+
+    /* Donate widget */
+    .donate{
+      margin-top:18px;
+      padding:14px;
+      border:1px solid var(--border);
+      border-radius:var(--radius-lg);
+      background:var(--surface);
+      box-shadow:var(--shadow-sm);
+    }
+    .donate__row{display:flex; gap:10px; flex-wrap:wrap; align-items:center}
+    .toggle{
+      display:flex;
+      border:1px solid var(--border);
+      border-radius:999px;
+      overflow:hidden;
+    }
+    .toggle button{
+      border:none; background:transparent; padding:8px 12px;
+      font-weight:800; cursor:pointer; color:var(--muted)
+    }
+    .toggle button.is-active{background:var(--primary-soft); color:var(--text)}
+    .amounts{display:flex; gap:10px; flex-wrap:wrap}
+    .chip{
+      border:1px solid var(--border);
+      background:#FAFAF9;
+      border-radius:999px;
+      padding:8px 12px;
+      font-weight:800;
+      cursor:pointer;
+    }
+    .chip.is-active{background:var(--primary-soft)}
+    .chip:hover{background:var(--surface)}
+    .donate__actions{margin-top:12px; display:flex; gap:10px; flex-wrap:wrap}
+
+    /* Progress bar */
+    .progress{height:10px; background:#E5E7EB; border-radius:999px; overflow:hidden}
+    .progress__bar{height:100%; width:55%; background:var(--primary)}
+
+    /* CTA banner */
+    .cta{
+      position:relative;
+      background:linear-gradient(0deg, rgba(0,0,0,.35), rgba(0,0,0,.35)),
+                 url("images/cta.jpg") center/cover no-repeat;
+      border-radius:24px;
+      overflow:hidden;
+      color:#fff;
+      padding:56px;
+      box-shadow:var(--shadow-md);
+    }
+    .cta .text{color:rgba(255,255,255,.85)}
+    .cta__actions{margin-top:16px; display:flex; gap:12px; flex-wrap:wrap}
+
+    /* Testimonials */
+    .stars{letter-spacing:2px; color:var(--primary)}
+    .avatar{
+      width:40px; height:40px; border-radius:999px; background:var(--primary-soft);
+      display:inline-block;
+    }
+    .person{display:flex; gap:10px; align-items:center; margin-top:12px}
+
+    /* Steps */
+    .step{
+      padding:18px;
+      min-height:170px;
+      display:flex; flex-direction:column; justify-content:space-between;
+    }
+    .step__num{
+      width:44px; height:44px; border-radius:14px;
+      background:var(--primary-soft);
+      display:grid; place-items:center;
+      font-weight:900;
+      box-shadow:var(--shadow-sm);
+    }
+    .animal-strip{
+      margin-top:28px;
+      height:120px;
+      border-radius:20px;
+      border:1px solid var(--border);
+      background: url("images/animals-strip.png") center/cover no-repeat;
+    }
+
+    /* FAQ */
+    details{
+      background:var(--surface);
+      border:1px solid var(--border);
+      border-radius:var(--radius-lg);
+      padding:14px 16px;
+      box-shadow:var(--shadow-sm);
+    }
+    details + details{margin-top:12px}
+    summary{cursor:pointer; font-weight:800}
+    summary::-webkit-details-marker{display:none}
+    .faq-grid{display:grid; grid-template-columns: 1.2fr .8fr; gap:24px; align-items:start}
+    .faq-side{
+      border-radius:24px;
+      border:1px solid var(--border);
+      overflow:hidden;
+      background:linear-gradient(135deg, rgba(170,191,181,.3), rgba(217,183,176,.25));
+      min-height:420px;
+      position:relative;
+      box-shadow:var(--shadow-md);
+    }
+    .stat-badge{
+      position:absolute;
+      right:16px;
+      top:16px;
+      background:var(--surface);
+      border:1px solid var(--border);
+      border-radius:16px;
+      padding:10px 12px;
+      box-shadow:var(--shadow-sm);
+      display:flex; align-items:center; gap:10px;
+    }
+    .stat-badge + .stat-badge{top:84px}
+    .stat-num{font-weight:900; color:var(--text)}
+    .stat-txt{font-size:12px; color:var(--muted)}
+
+    /* Logos row */
+    .logos{display:flex; justify-content:space-between; gap:18px; opacity:.78; flex-wrap:wrap}
+    .logo-pill{
+      border:1px solid var(--border);
+      border-radius:999px;
+      padding:10px 14px;
+      background:var(--surface);
+      box-shadow:var(--shadow-sm);
+      font-weight:900;
+      color:var(--muted);
+    }
+
+    /* Forms */
+    .field{display:flex; flex-direction:column; gap:6px}
+    .field label{font-size:13px; color:var(--muted)}
+    .input, .textarea, .select{
+      border:1px solid var(--border);
+      border-radius:12px;
+      padding:12px 14px;
+      font-size:14px;
+      background:var(--surface);
+    }
+    .textarea{min-height:120px; resize:vertical}
+    .form-grid{display:grid; grid-template-columns: 1fr 1fr; gap:14px}
+    .form-grid .span-2{grid-column: span 2}
+    .check{display:flex; gap:10px; align-items:flex-start}
+    .check input{margin-top:4px}
+
+    /* Footer */
+    .footer{padding:48px 0; border-top:1px solid var(--border); background:var(--surface)}
+    .footer__grid{display:grid; grid-template-columns: 1.2fr 1fr 1fr 1fr; gap:24px}
+    .footer a{color:var(--muted); font-size:14px}
+    .footer a:hover{color:var(--text)}
+    .social{display:flex; gap:10px; margin-top:10px; flex-wrap:wrap}
+    .social a{
+      width:38px; height:38px;
+      border-radius:12px;
+      border:1px solid var(--border);
+      display:grid; place-items:center;
+      background:#FAFAF9;
+    }
+
+    /* Комфорт на вузьких екранах (але дизайн “desktop first”) */
+    @media (max-width: 1240px){
+      .container{max-width: 1000px}
+      .grid-2{grid-template-columns: 1fr; gap:24px}
+      .grid-3{grid-template-columns: 1fr; }
+      .hero__overlay{position:static; width:auto; margin-top:16px}
+      .footer__grid{grid-template-columns: 1fr 1fr}
+      .nav{display:none} /* щоб не ламалося; у реальному проекті — бургер */
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Опційно: GTM <noscript> одразу після <body> -->
+
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="#top" aria-label="На головну">
+        <span class="brand__logo" aria-hidden="true">
+          <!-- ВИКОРИСТАННЯ ЛОГО: поклади logo.svg поруч з index.html -->
+          <img src="./logo.svg" alt="" />
+        </span>
+        <span class="brand__name">
+          <span class="t">Порятунок Тварин • Львівщина</span>
+          <span class="s">Волонтерська спільнота</span>
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="Навігація">
+        <a href="#about" data-track="nav-about">Про нас</a>
+        <a href="#help" data-track="nav-help">Як допомогти</a>
+        <a href="#urgent" data-track="nav-urgent">Термінові збори</a>
+        <a href="#report" data-track="nav-report">Повідомити про тварину</a>
+        <a href="#partners" data-track="nav-partners">Партнери</a>
+        <a href="#contact" data-track="nav-contact">Контакти</a>
+      </nav>
+
+      <div class="header__right">
+        <a class="btn btn--primary" href="#donate" data-track="cta-donate-header">Донат</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container grid-2">
+        <div>
+          <div class="eyebrow">Львівщина • Волонтери</div>
+          <h1>Допомагаємо котам і собакам Львівщини</h1>
+          <p class="text">
+            Рятуємо, лікуємо, стерилізуємо та організовуємо перетримку. Працюємо прозоро — зі звітами та підтримкою спільноти.
+          </p>
+
+          <div style="display:flex; gap:12px; margin-top:18px; flex-wrap:wrap">
+            <a class="btn btn--primary" href="#donate" data-track="cta-donate-hero">Підтримати донатом</a>
+            <a class="btn btn--outline" href="#report" data-track="cta-report-hero">Повідомити про тварину</a>
+          </div>
+
+          <div class="donate" id="donate" aria-label="Віджет донату">
+            <div class="donate__row">
+              <div class="toggle" role="tablist" aria-label="Періодичність донату">
+                <button type="button" class="is-active" aria-selected="true" data-track="donate-once">Разовий</button>
+                <button type="button" aria-selected="false" data-track="donate-monthly">Щомісячний</button>
+              </div>
+
+              <div class="amounts" aria-label="Суми донату">
+                <button class="chip" type="button" data-track="donate-amount-100">100</button>
+                <button class="chip" type="button" data-track="donate-amount-200">200</button>
+                <button class="chip" type="button" data-track="donate-amount-500">500</button>
+                <button class="chip" type="button" data-track="donate-amount-1000">1000</button>
+                <button class="chip" type="button" data-track="donate-amount-other">Інша сума</button>
+              </div>
+            </div>
+
+            <div class="donate__actions">
+              <button class="btn btn--primary" type="button" data-track="donate-submit">Донат</button>
+              <a class="btn btn--outline" href="#contact" data-track="donate-contact">Зв’язатися</a>
+            </div>
+
+            <p class="caption" style="margin:10px 0 0;">
+              Оплата — плейсхолдер. Реквізити та звіти — у футері.
+            </p>
+          </div>
+        </div>
+
+        <div class="hero__media" aria-label="Головне зображення">
+          <!-- Підстав свої картинки -->
+          <img src="images/hero.jpg" alt="Волонтер з врятованим собакою" onerror="this.remove();">
+          <div class="hero__overlay">
+            <div class="card">
+              <div style="height:160px; background:linear-gradient(135deg, rgba(217,183,176,.45), rgba(170,191,181,.35)); display:grid; place-items:center;">
+                <span class="badge" style="background:rgba(255,255,255,.75);">▶ Коротка історія</span>
+              </div>
+              <div class="card__body">
+                <p class="card__title">Як ми рятуємо</p>
+                <p class="caption">30 секунд про процес (плейсхолдер)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ПРО НАС -->
+    <section id="about" class="section section--alt">
+      <div class="container grid-2">
+        <div style="position:relative;">
+          <div class="card" style="border-radius:24px; overflow:hidden;">
+            <div style="height:420px; background:linear-gradient(135deg, rgba(170,191,181,.35), rgba(217,183,176,.3));"></div>
+          </div>
+
+          <div class="card" style="position:absolute; left:18px; top:18px; width:190px;">
+            <div class="card__body">
+              <p class="text-strong" style="margin:0; font-size:20px;">5 000+</p>
+              <p class="caption" style="margin:4px 0 0;">тварин отримали допомогу (плейсхолдер)</p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="eyebrow">Що робимо</div>
+          <h2>Порятунок, лікування та перетримка</h2>
+          <p class="text">
+            Реагуємо на термінові випадки, покриваємо вет-лікування, організовуємо тимчасові домівки та супроводжуємо до прилаштування.
+          </p>
+
+          <div class="divider" style="margin:18px 0;"></div>
+
+          <div class="grid-2" style="gap:18px;">
+            <div>
+              <p class="text-strong" style="margin:0;">Терміновий виїзд</p>
+              <p class="caption" style="margin:4px 0 0;">Забір з вулиці / небезпечних умов.</p>
+            </div>
+            <div>
+              <p class="text-strong" style="margin:0;">Ветеринарна допомога</p>
+              <p class="caption" style="margin:4px 0 0;">Аналізи, операції, реабілітація.</p>
+            </div>
+            <div>
+              <p class="text-strong" style="margin:0;">Мережа перетримок</p>
+              <p class="caption" style="margin:4px 0 0;">Тимчасовий дім до прилаштування.</p>
+            </div>
+            <div>
+              <p class="text-strong" style="margin:0;">Стерилізація</p>
+              <p class="caption" style="margin:4px 0 0;">Профілактика безконтрольного розмноження.</p>
+            </div>
+          </div>
+
+          <div style="margin-top:18px;">
+            <a class="btn btn--primary" href="#help" data-track="cta-help-about">Як допомогти</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ТЕРМІНОВІ ЗБОРИ -->
+    <section id="urgent" class="section">
+      <div class="container">
+        <div class="eyebrow">Терміново</div>
+        <h2>Термінові збори</h2>
+        <p class="text">Найнагальніші витрати: операції, ліки, транспорт і перетримка.</p>
+
+        <div class="grid-3" style="margin-top:22px;">
+          <article class="card">
+            <div style="height:160px; background:linear-gradient(135deg, rgba(217,183,176,.45), rgba(170,191,181,.35));"></div>
+            <div class="card__body">
+              <div class="card__meta">
+                <span class="badge badge--urgent">Терміново</span>
+                <span class="badge">Операція</span>
+              </div>
+              <p class="card__title">Фонд на невідкладну операцію</p>
+              <p class="caption">Ціль: 25 000 грн • Оновлено сьогодні (плейсхолдер)</p>
+              <div class="progress" aria-label="Прогрес збору"><div class="progress__bar" style="width:62%"></div></div>
+              <div style="display:flex; justify-content:space-between; margin-top:10px;">
+                <span class="caption">Зібрано: 15 500</span>
+                <span class="caption">62%</span>
+              </div>
+              <div style="margin-top:12px;">
+                <button class="btn btn--primary" type="button" data-track="urgent-donate-1">Підтримати</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div style="height:160px; background:linear-gradient(135deg, rgba(217,183,176,.35), rgba(170,191,181,.4));"></div>
+            <div class="card__body">
+              <div class="card__meta">
+                <span class="badge badge--urgent">Терміново</span>
+                <span class="badge">Ліки</span>
+              </div>
+              <p class="card__title">Пакет ліків на місяць</p>
+              <p class="caption">Ціль: 12 000 грн • Оновлено вчора (плейсхолдер)</p>
+              <div class="progress"><div class="progress__bar" style="width:41%"></div></div>
+              <div style="display:flex; justify-content:space-between; margin-top:10px;">
+                <span class="caption">Зібрано: 4 900</span>
+                <span class="caption">41%</span>
+              </div>
+              <div style="margin-top:12px;">
+                <button class="btn btn--primary" type="button" data-track="urgent-donate-2">Підтримати</button>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div style="height:160px; background:linear-gradient(135deg, rgba(170,191,181,.35), rgba(217,183,176,.35));"></div>
+            <div class="card__body">
+              <div class="card__meta">
+                <span class="badge">Транспорт</span>
+                <span class="badge">Пальне</span>
+              </div>
+              <p class="card__title">Підтримка виїздів та доставки</p>
+              <p class="caption">Ціль: 8 000 грн • Оновлено 3 дні тому (плейсхолдер)</p>
+              <div class="progress"><div class="progress__bar" style="width:73%"></div></div>
+              <div style="display:flex; justify-content:space-between; margin-top:10px;">
+                <span class="caption">Зібрано: 5 800</span>
+                <span class="caption">73%</span>
+              </div>
+              <div style="margin-top:12px;">
+                <button class="btn btn--primary" type="button" data-track="urgent-donate-3">Підтримати</button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ЯК ДОПОМОГТИ -->
+    <section id="help" class="section section--alt">
+      <div class="container">
+        <div class="eyebrow">Долучайся</div>
+        <h2>Як допомогти</h2>
+        <p class="text">Обери зручний формат — кожен внесок важливий.</p>
+
+        <div class="grid-3" style="margin-top:22px;">
+          <article class="card">
+            <div style="height:160px; background:linear-gradient(135deg, rgba(217,183,176,.45), rgba(255,255,255,0));"></div>
+            <div class="card__body">
+              <p class="card__title">Донат на лікування</p>
+              <p class="caption">Операції, аналізи, ліки, стаціонар.</p>
+              <a class="btn btn--primary" href="#donate" data-track="help-donate">Підтримати</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div style="height:160px; background:linear-gradient(135deg, rgba(170,191,181,.45), rgba(255,255,255,0));"></div>
+            <div class="card__body">
+              <p class="card__title">Перетримка</p>
+              <p class="caption">Тимчасовий дім для кота/собаки до прилаштування.</p>
+              <a class="btn btn--secondary" href="#contact" data-track="help-foster">Написати</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div style="height:160px; background:linear-gradient(135deg, rgba(217,183,176,.25), rgba(170,191,181,.25));"></div>
+            <div class="card__body">
+              <p class="card__title">Волонтерство</p>
+              <p class="caption">Доставка, виїзди, допомога на подіях, логістика.</p>
+              <a class="btn btn--outline" href="#contact" data-track="help-volunteer">Долучитися</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section">
+      <div class="container">
+        <div class="cta" role="region" aria-label="Заклик до дії">
+          <div class="eyebrow" style="color:rgba(255,255,255,.85)">Дій зараз</div>
+          <h2>Стань волонтером або підтримай терміновий кейс</h2>
+          <p class="text">Швидке підключення, зрозумілі задачі, координація в чаті. Або донат — на лікування й виїзди.</p>
+          <div class="cta__actions">
+            <a class="btn btn--primary" href="#contact" data-track="cta-join">Стати волонтером</a>
+            <a class="btn btn--outline" href="#donate" data-track="cta-donate-banner">Підтримати донатом</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ВІДГУКИ -->
+    <section class="section section--alt" id="testimonials">
+      <div class="container">
+        <div class="eyebrow">Довіра</div>
+        <h2>Відгуки донорів і волонтерів</h2>
+        <p class="text">Коротко про досвід співпраці зі спільнотою (плейсхолдер).</p>
+
+        <div class="grid-3" style="margin-top:22px;">
+          <article class="card">
+            <div class="card__body">
+              <div class="stars">★★★★★</div>
+              <p class="text" style="margin:10px 0 0;">
+                “Швидко відреагували на звернення. Надали план дій і реально довели кейс до одужання.”
+              </p>
+              <div class="person">
+                <span class="avatar" aria-hidden="true"></span>
+                <div>
+                  <div class="text-strong">Ірина</div>
+                  <div class="caption">донорка</div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card__body">
+              <div class="stars">★★★★★</div>
+              <p class="text" style="margin:10px 0 0;">
+                “Прозорі збори та зрозуміла комунікація. Є звіти, фото і оновлення по кожному терміновому випадку.”
+              </p>
+              <div class="person">
+                <span class="avatar" aria-hidden="true"></span>
+                <div>
+                  <div class="text-strong">Олег</div>
+                  <div class="caption">волонтер</div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card__body">
+              <div class="stars">★★★★★</div>
+              <p class="text" style="margin:10px 0 0;">
+                “Підказали по перетримці, підтримали кормом і консультаціями. Дуже людяний підхід.”
+              </p>
+              <div class="person">
+                <span class="avatar" aria-hidden="true"></span>
+                <div>
+                  <div class="text-strong">Марія</div>
+                  <div class="caption">перетримка</div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- КРОКИ (інформаційно, без каталогу/профілів) -->
+    <section class="section" id="steps">
+      <div class="container">
+        <div class="eyebrow">Процес</div>
+        <h2>Як працює порятунок і прилаштування</h2>
+        <p class="text">Без “каталогів”: це інформаційні кроки, щоб люди розуміли логіку процесу.</p>
+
+        <div class="grid-3" style="margin-top:22px;">
+          <article class="card step">
+            <div class="step__num">01</div>
+            <div>
+              <p class="text-strong" style="margin:14px 0 6px;">Звернення</p>
+              <p class="caption" style="margin:0;">Повідомлення, фото, локація. Оцінка терміновості.</p>
+            </div>
+          </article>
+
+          <article class="card step">
+            <div class="step__num">02</div>
+            <div>
+              <p class="text-strong" style="margin:14px 0 6px;">Допомога</p>
+              <p class="caption" style="margin:0;">Виїзд/доставка, лікування, стерилізація, відновлення.</p>
+            </div>
+          </article>
+
+          <article class="card step">
+            <div class="step__num">03</div>
+            <div>
+              <p class="text-strong" style="margin:14px 0 6px;">Перетримка / прилаштування</p>
+              <p class="caption" style="margin:0;">Тимчасовий дім, співбесіда, відповідальні умови.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="animal-strip" aria-label="Смуга з тваринами (плейсхолдер)"></div>
+      </div>
+    </section>
+
+    <!-- ПОВІДОМИТИ ПРО ТВАРИНУ -->
+    <section class="section section--alt" id="report">
+      <div class="container">
+        <div class="eyebrow">Звернення</div>
+        <h2>Повідомити про тварину</h2>
+        <p class="text">Заповни коротку форму — це допоможе нам швидше відреагувати.</p>
+
+        <div class="grid-2" style="margin-top:22px; align-items:start;">
+          <form class="card" style="padding:18px" data-track="report-form">
+            <div class="form-grid">
+              <div class="field">
+                <label for="animalType">Тип</label>
+                <select id="animalType" class="select" required>
+                  <option value="">Оберіть…</option>
+                  <option value="cat">Кіт</option>
+                  <option value="dog">Собака</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="location">Локація (нас. пункт / район)</label>
+                <input id="location" class="input" type="text" placeholder="Напр., Львів, Сихів / Яворівський р-н" required />
+              </div>
+
+              <div class="field span-2">
+                <label for="desc">Опис стану</label>
+                <textarea id="desc" class="textarea" placeholder="Поранення, поведінка, чи потрібна термінова допомога…" required></textarea>
+              </div>
+
+              <div class="field">
+                <label for="phone">Контактний телефон</label>
+                <input id="phone" class="input" type="tel" placeholder="+380…" required />
+              </div>
+
+              <div class="field">
+                <label for="photo">Фото (плейсхолдер)</label>
+                <input id="photo" class="input" type="file" accept="image/*" />
+              </div>
+
+              <div class="check span-2">
+                <input id="consent" type="checkbox" required />
+                <label for="consent" class="caption">
+                  Погоджуюся на обробку контактних даних для зворотного зв’язку щодо цього звернення.
+                </label>
+              </div>
+
+              <div class="span-2" style="display:flex; gap:10px; flex-wrap:wrap;">
+                <button class="btn btn--primary" type="submit" data-track="report-submit">Надіслати</button>
+                <a class="btn btn--outline" href="#contact" data-track="report-contact">Зв’язатися напряму</a>
+              </div>
+
+              <p class="caption span-2" style="margin:0;">
+                Тут — базовий фронт. Підключення відправки (email/CRM/Telegram) робиться окремо.
+              </p>
+            </div>
+          </form>
+
+          <div class="card" style="padding:18px">
+            <p class="text-strong" style="margin:0 0 10px;">Що зробити першочергово</p>
+            <ul class="caption" style="margin:0; padding-left:18px; line-height:1.7;">
+              <li>Оціни ризики: чи є агресія / небезпека для людей.</li>
+              <li>Якщо тварина поранена — по можливості обмеж рух і зігрій.</li>
+              <li>Не давай ліки “наосліп”. Краще — вода й тепло.</li>
+              <li>Зроби 2–3 фото та точну геолокацію.</li>
+              <li>Якщо можеш — зачекай на місці до контакту з координатором.</li>
+            </ul>
+
+            <div style="margin-top:16px; display:flex; gap:10px; flex-wrap:wrap;">
+              <span class="badge badge--urgent">Терміново: 103/ветклініка</span>
+              <span class="badge">Координація: чат/дзвінок</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="eyebrow">Питання</div>
+        <h2>Часті запитання</h2>
+        <p class="text">Короткі відповіді про донати, волонтерство, перетримки та звіти.</p>
+
+        <div class="faq-grid" style="margin-top:22px;">
+          <div>
+            <details>
+              <summary>Як ви звітуєте про використання коштів?</summary>
+              <p class="caption" style="margin:10px 0 0;">Публікуємо оновлення по кейсах і підсумкові звіти (розділ “Новини та звіти”).</p>
+            </details>
+
+            <details>
+              <summary>Як стати волонтером?</summary>
+              <p class="caption" style="margin:10px 0 0;">Напишіть через форму в “Контакти”. Ми запропонуємо задачі за вашим ресурсом (доставка/виїзди/події/перетримка).</p>
+            </details>
+
+            <details>
+              <summary>Чи потрібен досвід для перетримки?</summary>
+              <p class="caption" style="margin:10px 0 0;">Не завжди. Пояснюємо базу та допомагаємо з процесом. Головне — відповідальність і безпека.</p>
+            </details>
+
+            <details>
+              <summary>Що робити, якщо я знайшов тварину вночі?</summary>
+              <p class="caption" style="margin:10px 0 0;">Зафіксуйте локацію, забезпечте тепло/воду, зробіть фото і залиште заявку. За критичного стану — ветдопомога.</p>
+            </details>
+          </div>
+
+          <div class="faq-side" aria-label="Візуальний блок FAQ (плейсхолдер)">
+            <div class="stat-badge">
+              <div>
+                <div class="stat-num">48</div>
+                <div class="stat-txt">волонтерів (плейсхолдер)</div>
+              </div>
+            </div>
+            <div class="stat-badge">
+              <div>
+                <div class="stat-num">120</div>
+                <div class="stat-txt">перетримок (плейсхолдер)</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ПАРТНЕРИ -->
+    <section class="section section--alt" id="partners">
+      <div class="container">
+        <div class="eyebrow">Підтримка</div>
+        <h2>Партнери та ветклініки</h2>
+        <p class="text">Логотипи — плейсхолдери. Тут буде перелік партнерів Львівщини.</p>
+
+        <div class="logos" style="margin-top:22px;">
+          <span class="logo-pill">Partner A</span>
+          <span class="logo-pill">Partner B</span>
+          <span class="logo-pill">Vet Clinic</span>
+          <span class="logo-pill">Sponsor</span>
+          <span class="logo-pill">Community</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- НОВИНИ / ЗВІТИ -->
+    <section class="section" id="reports">
+      <div class="container">
+        <div class="eyebrow">Прозорість</div>
+        <h2>Новини та звіти</h2>
+        <p class="text">Оновлення по кейсах, підсумкові звіти, історії порятунку (плейсхолдер).</p>
+
+        <div class="grid-3" style="margin-top:22px;">
+          <article class="card">
+            <div style="height:160px; background:linear-gradient(135deg, rgba(217,183,176,.35), rgba(170,191,181,.25));"></div>
+            <div class="card__body">
+              <p class="card__title">Звіт за місяць</p>
+              <p class="caption">Скільки кейсів, витрати, результати (плейсхолдер).</p>
+              <a class="btn btn--link" href="#contact" data-track="report-open-1">Читати →</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div style="height:160px; background:linear-gradient(135deg, rgba(170,191,181,.35), rgba(217,183,176,.2));"></div>
+            <div class="card__body">
+              <p class="card__title">Історія порятунку</p>
+              <p class="caption">Короткий кейс з оновленнями (плейсхолдер).</p>
+              <a class="btn btn--link" href="#donate" data-track="report-open-2">Підтримати →</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <div style="height:160px; background:linear-gradient(135deg, rgba(217,183,176,.25), rgba(170,191,181,.35));"></div>
+            <div class="card__body">
+              <p class="card__title">Потреби тижня</p>
+              <p class="caption">Корм, ліки, пелюшки, переноски (плейсхолдер).</p>
+              <a class="btn btn--link" href="#contact" data-track="report-open-3">Допомогти →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- КОНТАКТИ -->
+    <section class="section section--alt" id="contact">
+      <div class="container">
+        <div class="eyebrow">Зв’язок</div>
+        <h2>Контакти</h2>
+        <p class="text">Напиши нам, якщо хочеш допомогти, стати перетримкою або волонтером.</p>
+
+        <div class="grid-2" style="margin-top:22px; align-items:start;">
+          <div class="card" style="padding:18px">
+            <p class="text-strong" style="margin:0 0 10px;">Швидкі контакти</p>
+            <p class="caption" style="margin:0 0 8px;">Телефон: +380 XX XXX XX XX (плейсхолдер)</p>
+            <p class="caption" style="margin:0 0 8px;">Telegram/WhatsApp: @username (плейсхолдер)</p>
+            <p class="caption" style="margin:0 0 8px;">Email: hello@example.org (плейсхолдер)</p>
+            <p class="caption" style="margin:0;">Години: 09:00–20:00 (плейсхолдер)</p>
+
+            <div class="divider" style="margin:18px 0;"></div>
+
+            <p class="text-strong" style="margin:0 0 10px;">Реквізити (плейсхолдер)</p>
+            <p class="caption" style="margin:0;">IBAN: UA00 0000 0000 0000 0000 0000 0000</p>
+            <p class="caption" style="margin:0;">Призначення: “Допомога тваринам”</p>
+          </div>
+
+          <form class="card" style="padding:18px" data-track="contact-form">
+            <div class="form-grid">
+              <div class="field">
+                <label for="name">Ім’я</label>
+                <input id="name" class="input" type="text" placeholder="Ваше ім’я" required />
+              </div>
+
+              <div class="field">
+                <label for="contactWay">Контакт (телефон/месенджер)</label>
+                <input id="contactWay" class="input" type="text" placeholder="+380… або @username" required />
+              </div>
+
+              <div class="field span-2">
+                <label for="msg">Повідомлення</label>
+                <textarea id="msg" class="textarea" placeholder="Коротко: чим можете допомогти або яке питання…" required></textarea>
+              </div>
+
+              <div class="check span-2">
+                <input id="consent2" type="checkbox" required />
+                <label for="consent2" class="caption">Погоджуюся на обробку контактних даних для відповіді.</label>
+              </div>
+
+              <div class="span-2" style="display:flex; gap:10px; flex-wrap:wrap;">
+                <button class="btn btn--primary" type="submit" data-track="contact-submit">Надіслати</button>
+                <a class="btn btn--outline" href="#donate" data-track="contact-donate">Підтримати донатом</a>
+              </div>
+
+              <p class="caption span-2" style="margin:0;">
+                Тут — базова форма. Підключення відправки робиться на бекенді/через сервіс.
+              </p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container footer__grid">
+        <div>
+          <div class="brand" style="min-width:unset">
+            <span class="brand__logo" aria-hidden="true">
+              <img src="./logo.svg" alt="" />
+            </span>
+            <span class="brand__name">
+              <span class="t">Порятунок Тварин</span>
+              <span class="s">Львівщина</span>
+            </span>
+          </div>
+          <p class="caption" style="margin:12px 0 0;">
+            Волонтерська ініціатива. Дизайн — за референсом зі скріншота (структура/стиль).
+          </p>
+
+          <div class="social" aria-label="Соцмережі">
+            <a href="#" aria-label="Instagram">IG</a>
+            <a href="#" aria-label="Facebook">FB</a>
+            <a href="#" aria-label="Telegram">TG</a>
+          </div>
+        </div>
+
+        <div>
+          <p class="text-strong" style="margin:0 0 10px;">Навігація</p>
+          <p style="margin:0"><a href="#about">Про нас</a></p>
+          <p style="margin:0"><a href="#help">Як допомогти</a></p>
+          <p style="margin:0"><a href="#urgent">Термінові збори</a></p>
+          <p style="margin:0"><a href="#report">Повідомити про тварину</a></p>
+        </div>
+
+        <div>
+          <p class="text-strong" style="margin:0 0 10px;">Документи</p>
+          <p style="margin:0"><a href="#">Політика конфіденційності (плейсхолдер)</a></p>
+          <p style="margin:0"><a href="#">Умови використання (плейсхолдер)</a></p>
+          <p style="margin:0"><a href="#reports">Новини та звіти</a></p>
+        </div>
+
+        <div>
+          <p class="text-strong" style="margin:0 0 10px;">Контакти</p>
+          <p class="caption" style="margin:0 0 6px;">+380 XX XXX XX XX</p>
+          <p class="caption" style="margin:0 0 6px;">hello@example.org</p>
+          <p class="caption" style="margin:0;">© <span id="y"></span> Порятунок Тварин</p>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    // дрібна інтерактивність (без залежностей)
+    document.getElementById("y").textContent = new Date().getFullYear();
+
+    // toggle donate
+    const toggleButtons = document.querySelectorAll(".toggle button");
+    toggleButtons.forEach(btn => btn.addEventListener("click", () => {
+      toggleButtons.forEach(b => b.classList.remove("is-active"));
+      btn.classList.add("is-active");
+    }));
+
+    // amount chips
+    const chips = document.querySelectorAll(".chip");
+    chips.forEach(ch => ch.addEventListener("click", () => {
+      chips.forEach(c => c.classList.remove("is-active"));
+      ch.classList.add("is-active");
+    }));
+
+    // prevent submit (base template)
+    document.querySelectorAll("form").forEach(f => f.addEventListener("submit", (e) => {
+      e.preventDefault();
+      alert("Форма — плейсхолдер. Підключення відправки робиться окремо.");
+    }));
+  </script>
+</body>
+</html>

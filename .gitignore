@@ -1,0 +1,16 @@
+# Ignore everything
+*
+
+# Allow HTML files
+!*.html
+
+# Allow styles and scripts
+!styles.css
+!script.js
+
+# Allow images folder
+!images/
+!images/**
+
+# Allow .gitignore itself
+!.gitignore
